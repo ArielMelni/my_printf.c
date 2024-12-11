@@ -8,7 +8,7 @@
 // working its way up and printing every character from that number and onwards so the entire number could 
 // be effectively printed. 
 
-void print_number(int num){ 
+void print_number (int num) { 
 
     // Make sure to deal with negative numbers. 
     if (num < 0){ 
@@ -34,12 +34,12 @@ void print_hex(int num){
     
 }
 
-void print_string(const char s){
-    for ( const char *p = s; *p != '\0'; p++){ 
-        putchar(*p);
-    }
+// void print_string(const char s){
+//     for ( const char *p = s; *p != '\0'; p++){ 
+//         putchar(*p);
+//     }
 
-}
+// }
 void my_printf( char *str , ...){ 
     // initialize the va_list so that you can take in an unknown amount of arguments. 
     va_list args; 
@@ -80,8 +80,7 @@ void my_printf( char *str , ...){
 
                 // if the character is a string. 
                 case 's': {
-                    int value = va_arg(args, int); 
-                    print_string(value);
+                    
                     break;
                 }
 
@@ -91,11 +90,13 @@ void my_printf( char *str , ...){
  }
 
 int main(){
-    my_printf("Digit Test: %d \n", 123455); 
+    my_printf("NO PERCENTS TEST\n");
+    my_printf("-------------------------\n");
+    my_printf("Long Digit Test: %d \n", 123455);
+    my_printf("Short Digit Test: %d \n", 3);
+    my_printf("Negative Digit Test: %d \n", -123);
     my_printf("--------------------------\n"); 
     my_printf("Character Test: %c \n",'h');
     my_printf("--------------------------"); 
-    my_printf("New Edit!");
-    my_printf("new new");
-
+     
 }
