@@ -30,14 +30,19 @@ void print_character(char c){
     putchar(c); 
 }
 
-void print_string(char str[]){
-  for (int i =0; i != "\0"; i++){
-    putchar(str[i]);
-      }
+void print_string(const char *str ){
+   for (const char *p = str; *p !='\0'; p++){
+     putchar(*p);
+   }
 }
 
-void print_hex(int num){ 
-    
+void print_hex(int num){
+  int remainder = 0; 
+  while (num >0){
+     remainder = num % 16;
+     num = num / 16;
+  }
+  putchar((remainder%10) +'0');
 }
 
 // void print_string(const char s){
@@ -86,7 +91,7 @@ void my_printf( char *str , ...){
 
                 // if the character is a string. 
                 case 's': {
-                    const char *value = va_arg(args, const char*);
+                    char *value = va_arg(args, char*);
                     print_string(value);
 
                     break;
@@ -105,7 +110,7 @@ int main(){
     my_printf("Negative Digit Test: %d \n", -123);
     my_printf("--------------------------\n"); 
     my_printf("Character Test: %c \n",'h');
-    my_printf("--------------------------");
+    my_printf("--------------------------\n");
     my_printf("String Test: %s \n", "You successfully printed this string yay!");
      
 }
