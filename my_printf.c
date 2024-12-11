@@ -30,6 +30,12 @@ void print_character(char c){
     putchar(c); 
 }
 
+void print_string(char str[]){
+  for (int i =0; i != "\0"; i++){
+    putchar(str[i]);
+      }
+}
+
 void print_hex(int num){ 
     
 }
@@ -80,7 +86,9 @@ void my_printf( char *str , ...){
 
                 // if the character is a string. 
                 case 's': {
-                    
+                    const char *value = va_arg(args, const char*);
+                    print_string(value);
+
                     break;
                 }
 
@@ -97,6 +105,7 @@ int main(){
     my_printf("Negative Digit Test: %d \n", -123);
     my_printf("--------------------------\n"); 
     my_printf("Character Test: %c \n",'h');
-    my_printf("--------------------------"); 
+    my_printf("--------------------------");
+    my_printf("String Test: %s \n", "You successfully printed this string yay!");
      
 }
