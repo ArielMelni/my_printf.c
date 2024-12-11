@@ -37,12 +37,14 @@ void print_string(const char *str ){
 }
 
 void print_hex(int num){
-  int remainder = 0; 
+  int remainder = 0;
+  printf("The origional number pressed %d", num); 
   while (num >0){
+    printf("num so far: %d", num);
      remainder = num % 16;
      num = num / 16;
   }
-  putchar((remainder%10) +'0');
+  putchar((remainder % 10) +'0');
 }
 
 // void print_string(const char s){
@@ -112,5 +114,6 @@ int main(){
     my_printf("Character Test: %c \n",'h');
     my_printf("--------------------------\n");
     my_printf("String Test: %s \n", "You successfully printed this string yay!");
-     
+    my_printf("----------------------------\n");
+    my_printf("Hex Test: %h \n", 16);
 }
