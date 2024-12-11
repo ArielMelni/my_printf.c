@@ -114,5 +114,7 @@ int main(){
     my_printf("--------------------------\n");
     my_printf("String Test: %s \n", "You successfully printed this string yay!");
     my_printf("----------------------------\n");
-    my_printf("Hex Test: %x \n", 16);
+    my_printf("Hex Test (Answer should be 1): %x \n", 16);
+    my_printf("Hex Test 2 ( Answer should be 64): %x \n ", 100);
+    my_printf("Hex Tes (Answer should be 7E4): %x \n", 2020); 
 }
