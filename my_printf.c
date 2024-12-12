@@ -2,26 +2,26 @@
 #include <stdarg.h>
 
 
-// This function takes num, but because putchar can only 
-// take one number from 0-9 at a time, this function will check if 
-// the number is greater than 9 and if it is then it will recursively cut down the number 
-// working its way up and printing every character from that number and onwards so the entire number could 
-// be effectively printed. 
 
 void print_number (int num) { 
-
+  int newN =0;
     // Make sure to deal with negative numbers. 
     if (num < 0){ 
         putchar('-'); 
         num = -num;
     }
-    // if the number is more than one character 
-    if (num > 9){ 
-        // recursively call the function itself and cutt down the number 
-        print_number(num/10);
+    // This will recusively cut down the number.
+    // The advantage of using recursion here is that it will cut the number
+    // to be the first digit.
+    if (num !=0){
+      print_number(num/10);
     }
-    // make sure to change the number into a character sot that putchar will work effectively. 
-    putchar((num %10)+ '0');
+    // This line will actually collect the first digit and print it.
+    // Because it is recursive when returning from the first digit it will
+    // print every digit in order and then return fully from the recursion with the full
+    // digit printed in order. 
+    newN = num % 10;
+    putchar(newN + '0');
 }
 
 
@@ -126,9 +126,9 @@ void my_printf( char *str , ...){
 int main(){
     my_printf("NO PERCENTS TEST\n");
     my_printf("-------------------------\n");
-    my_printf("Long Digit Test: %d \n", 123455);
-    my_printf("Short Digit Test: %d \n", 3);
-    my_printf("Negative Digit Test: %d \n", -123);
+    my_printf("Long Digit Test: %d  (answer should be 123455)\n", 123455);
+    my_printf("Short Digit Test: %d (answer should be 3)\n", 3);
+    my_printf("Negative Digit Test: %d (answer should be -123)\n", -123);
     my_printf("--------------------------\n"); 
     my_printf("Character Test: %c \n",'h');
     my_printf("--------------------------\n");
