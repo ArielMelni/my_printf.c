@@ -19,9 +19,15 @@ void print_number (int num) {
     // This line will actually collect the first digit and print it.
     // Because it is recursive when returning from the first digit it will
     // print every digit in order and then return fully from the recursion with the full
-    // digit printed in order. 
+    // digit printed in order.
+
     newN = num % 10;
-    putchar(newN + '0');
+    
+    // this is necessary because the first time newN would equal 0 because num = 0
+    if (num >0){
+      // turn the number into a character and print it
+      putchar(newN + '0');
+    }
 }
 
 
@@ -40,13 +46,17 @@ void my_printf( char *str,...);
 
 void print_hex(int num){
   int newN =0;
+  // following the same logic as print_digit.
 
-  
+  //cutt the digit down to the first one. Instead of using 10, we are base 16. 
+  if (num !=0){
+    print_hex(num/16); 
 
-  
-  while(num >0){
-    newN = num % 16;
-    num = num/ 16;
+  }
+  //get the last number by getting the remainder when moding by 16.
+  newN = num %16;
+    
+  if (num >0){
      switch(newN){
         case 10:
            my_printf("%c", 'A');
