@@ -36,22 +36,41 @@ void print_string(const char *str ){
    }
 }
 
+void my_printf( char *str,...);
+
 void print_hex(int num){
-  int remainder = 0; 
-  while (num >0){
-    
-     remainder = remainder + (num % 16);
-     num = num / 16;
+  int newN =0;
+
+  
+
+  
+  while(num >0){
+    newN = num % 16;
+    num = num/ 16;
+     switch(newN){
+        case 10:
+           my_printf("%c", 'A');
+           break;
+        case 11:
+	   my_printf("%c", 'B');
+	   break;
+        case 12:
+           my_printf("%c", 'C');
+	   break;
+        case 13:
+           my_printf("%c", 'D');
+           break;
+        case 14:
+           my_printf("%c", 'E');
+           break;
+        case 15:
+       	   my_printf("%c", 'F');
+	   break; 
+        default:
+	   my_printf("%d", newN);
+      }
   }
-  print_number(remainder);
 }
-
-// void print_string(const char s){
-//     for ( const char *p = s; *p != '\0'; p++){ 
-//         putchar(*p);
-//     }
-
-// }
 void my_printf( char *str , ...){ 
     // initialize the va_list so that you can take in an unknown amount of arguments. 
     va_list args; 
@@ -86,8 +105,9 @@ void my_printf( char *str , ...){
                 // if the character is a hex digit 
                 case 'x': {
                     int value = va_arg(args, int);
-                    print_hex(value);
-                    break;
+		    print_hex(value);
+		    //   my_printf("found hex ");
+		    break;
                 }
 
                 // if the character is a string. 
@@ -114,7 +134,7 @@ int main(){
     my_printf("--------------------------\n");
     my_printf("String Test: %s \n", "You successfully printed this string yay!");
     my_printf("----------------------------\n");
-    my_printf("Hex Test (Answer should be 1): %x \n", 16);
-    my_printf("Hex Test 2 ( Answer should be 64): %x \n ", 100);
-    my_printf("Hex Tes (Answer should be 7E4): %x \n", 2020); 
+    my_printf("Hex Test 1 (Answer should be A): %x\n", 10);
+    my_printf("Hex Test 2 ( Answer should be 64):%x\n", 100);
+    my_printf("Hex Test 3  (Answer should be 7E4): %x\n", 2020); 
 }
