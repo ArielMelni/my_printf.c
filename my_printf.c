@@ -82,21 +82,20 @@ void print_hex(int num){
   }
 }
 
-void print_modifiers( static char modifiers[]){
+void print_modifiers(char modifiers[]){
   for (int i =0; i <10 ; i++){
-    my_printf(modifiers[i]);
+    putchar(modifiers[i]);
   }
 }
-
 void my_printf( char *str , ...){ 
     // initialize the va_list so that you can take in an unknown amount of arguments. 
     va_list args; 
     va_start(args, str);
 
-     int r_modifiers =0;
+    int r_modifiers =0;
 
-      static char modifiers[10];
-      int len_modifiers =0;
+    char modifiers[10];
+    int len_modifiers =0;
     // loop through the input string first argument
     // the '\0' makes sure to keep looping until a null is encountered
     
@@ -105,7 +104,7 @@ void my_printf( char *str , ...){
         if (*p != '%'){
             putc(*p, stdout);
         }else{
-           // if a % is encountered, then increment p to the next character 
+           // if a % is encountered, then increment p to the next character
             p++; 
             switch (*p) {
                 // if the character is a digit 
@@ -115,7 +114,7 @@ void my_printf( char *str , ...){
                     print_number(value);	    
                     break;
 		  }else{
-		    print_modifiers(modifiers); 
+		    printf("found d after modifiers\n");
 		  }
                 }
                 // if the character is a character
@@ -138,11 +137,9 @@ void my_printf( char *str , ...){
 	        default:
 		      if(r_modifiers ==0){
 			r_modifiers =1;
-			len_modifiers ++;
 			modifiers[len_modifiers] = *p;
-		      }else{
-			len_modifiers ++;
-			modifiers[len_modifiers] =*p;
+			len_modifiers++;
+			printf("position 0 of the array %c\n", modifiers[0]); 
 		      }
                 }
 	      }
@@ -166,5 +163,5 @@ int main(){
     my_printf("Hex Test 2 ( Answer should be 64):%x\n", 100);
     my_printf("Hex Test 3  (Answer should be 7E4): %x\n", 2020);
     my_printf("----------------------------\n");
-    my_printf("test found modifiers %10");
+    my_printf("test found modifiers %ad\n");
 }
