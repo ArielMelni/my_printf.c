@@ -81,21 +81,10 @@ void print_hex(int num){
       }
   }
 }
-
-void print_modifiers(char modifiers[]){
-  for (int i =0; i <10 ; i++){
-    putchar(modifiers[i]);
-  }
-}
 void my_printf( char *str , ...){ 
     // initialize the va_list so that you can take in an unknown amount of arguments. 
     va_list args; 
-    va_start(args, str);
-
-    int r_modifiers =0;
-
-    char modifiers[10];
-    int len_modifiers =0;
+    va_start(args, str); 
     // loop through the input string first argument
     // the '\0' makes sure to keep looping until a null is encountered
     
@@ -103,21 +92,21 @@ void my_printf( char *str , ...){
         // if no percent sign is encountered, put the character to stdout. 
         if (*p != '%'){
             putc(*p, stdout);
-        }else{
-           // if a % is encountered, then increment p to the next character
+        }
+        else 
+            {
+                // if a % is encountered, then increment p to the next character 
             p++; 
             switch (*p) {
                 // if the character is a digit 
+
                 case 'd':{
-		  if (r_modifiers ==0){
-		    int value = va_arg(args, int); 
-                    print_number(value);	    
+                    int value = va_arg(args, int); 
+                    print_number(value); 
                     break;
-		  }else{
-		    printf("found d after modifiers\n");
-		  }
                 }
                 // if the character is a character
+
                 case 'c': {
                     int value = va_arg(args, int); 
                     print_character(value); 
@@ -129,20 +118,16 @@ void my_printf( char *str , ...){
 		    print_hex(value);
 		    //   my_printf("found hex ");
 		    break;
+                }
+
                 // if the character is a string. 
                 case 's': {
-                    char *value = va_arg(args,char*);
+                    char *value = va_arg(args, char*);
                     print_string(value);
+
                     break;
-	        default:
-		      if(r_modifiers ==0){
-			r_modifiers =1;
-			modifiers[len_modifiers] = *p;
-			len_modifiers++;
-			printf("position 0 of the array %c\n", modifiers[0]); 
-		      }
                 }
-	      }
+
             }
         }
     }
@@ -151,7 +136,7 @@ void my_printf( char *str , ...){
 int main(){
     my_printf("NO PERCENTS TEST\n");
     my_printf("-------------------------\n");
-    my_printf("Long D igit Test: %d  (answer should be 123455)\n", 123455);
+    my_printf("Long Digit Test: %d  (answer should be 123455)\n", 123455);
     my_printf("Short Digit Test: %d (answer should be 3)\n", 3);
     my_printf("Negative Digit Test: %d (answer should be -123)\n", -123);
     my_printf("--------------------------\n"); 
@@ -161,7 +146,5 @@ int main(){
     my_printf("----------------------------\n");
     my_printf("Hex Test 1 (Answer should be A): %x\n", 10);
     my_printf("Hex Test 2 ( Answer should be 64):%x\n", 100);
-    my_printf("Hex Test 3  (Answer should be 7E4): %x\n", 2020);
-    my_printf("----------------------------\n");
-    my_printf("test found modifiers %ad\n");
+    my_printf("Hex Test 3  (Answer should be 7E4): %x\n", 2020); 
 }
