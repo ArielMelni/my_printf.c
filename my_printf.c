@@ -1,8 +1,13 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+void print_sign(int num){
+  if (num >0){
 
+    putchar('+');
+  }
 
+}
 void print_number (int num) { 
   int newN =0;
     // Make sure to deal with negative numbers. 
@@ -87,35 +92,52 @@ void my_printf( char *str , ...){
     va_start(args, str); 
     // loop through the input string first argument
     // the '\0' makes sure to keep looping until a null is encountered
-    
+    int foundM =0;
+    int flagPlus =0;
     for (const char *p = str; *p !='\0'; p++){
         // if no percent sign is encountered, put the character to stdout. 
-        if (*p != '%'){
+     
+      if (*p != '%' && foundM ==0){
             putc(*p, stdout);
         }
-        else 
-            {
-                // if a % is encountered, then increment p to the next character 
-            p++; 
+      if (*p == '%'){
+	foundM =1;
+      }
+      
+      if (foundM ==1){ 
             switch (*p) {
-                // if the character is a digit 
-
+                // if the character is a digit
+	    case '+':{
+	      flagPlus =1;
+	      break; 
+	    }
                 case 'd':{
+		    
                     int value = va_arg(args, int); 
-                    print_number(value); 
+		    if (flagPlus ==1){
+		      print_sign(value);
+		      print_number(value);
+		      flagPlus =0;
+		      foundM =0;
+		    }else{
+		      print_number(value);
+		      foundM =0;
+		    }
                     break;
                 }
                 // if the character is a character
 
                 case 'c': {
                     int value = va_arg(args, int); 
-                    print_character(value); 
+                    print_character(value);
+		    foundM =0;
                     break; 
                 }
                 // if the character is a hex digit 
                 case 'x': {
                     int value = va_arg(args, int);
 		    print_hex(value);
+		    foundM =0;
 		    //   my_printf("found hex ");
 		    break;
                 }
@@ -124,15 +146,15 @@ void my_printf( char *str , ...){
                 case 's': {
                     char *value = va_arg(args, char*);
                     print_string(value);
-
+		    foundM =0;
                     break;
-                }
 
-            }
+		    
+                }
         }
     }
  }
-
+}
 int main(){
     my_printf("NO PERCENTS TEST\n");
     my_printf("-------------------------\n");
@@ -146,5 +168,8 @@ int main(){
     my_printf("----------------------------\n");
     my_printf("Hex Test 1 (Answer should be A): %x\n", 10);
     my_printf("Hex Test 2 ( Answer should be 64):%x\n", 100);
-    my_printf("Hex Test 3  (Answer should be 7E4): %x\n", 2020); 
+    my_printf("Hex Test 3  (Answer should be 7E4): %x\n", 2020);
+    my_printf("----------------------------\n");
+    my_printf("%+d\n", 10);
+    my_printf("%+d\n", -10);
 }
