@@ -41,8 +41,8 @@ void print_character(char c){
     putchar(c); 
 }
 
-void print_string(const char *str ){
-   for (const char *p = str; *p !='\0'; p++){
+void print_string(const char *s ){
+   for (const char *p = s; *p !='\0'; p++){
      putchar(*p);
    }
 }
@@ -86,6 +86,8 @@ void print_hex(int num){
       }
   }
 }
+
+
 void my_printf( char *str , ...){ 
     // initialize the va_list so that you can take in an unknown amount of arguments. 
     va_list args; 
@@ -94,6 +96,7 @@ void my_printf( char *str , ...){
     // the '\0' makes sure to keep looping until a null is encountered
     int foundM =0;
     int flagPlus =0;
+    int width =0;
     for (const char *p = str; *p !='\0'; p++){
         // if no percent sign is encountered, put the character to stdout. 
      
@@ -111,14 +114,15 @@ void my_printf( char *str , ...){
 	      flagPlus =1;
 	      break; 
 	    }
-                case 'd':{
-		    
+                case 'd':{		    
                     int value = va_arg(args, int); 
-		    if (flagPlus ==1){
+		    if (flagPlus ==1 ){
 		      print_sign(value);
 		      print_number(value);
 		      flagPlus =0;
 		      foundM =0;
+		      
+		    
 		    }else{
 		      print_number(value);
 		      foundM =0;
@@ -148,10 +152,18 @@ void my_printf( char *str , ...){
                     print_string(value);
 		    foundM =0;
                     break;
-
 		    
                 }
-        }
+           }
+	  if (*p >=48 && *p <=57 && foundM ==1){
+	      if (width ==0){
+		width = *p - '0';
+	      }else{
+		int newW = *p - '0';
+		width = (width * 10) + newW;
+		printf("%d", width);
+	      }
+	    }
     }
  }
 }
@@ -172,4 +184,5 @@ int main(){
     my_printf("----------------------------\n");
     my_printf("%+d\n", 10);
     my_printf("%+d\n", -10);
+    my_printf("%10");
 }
