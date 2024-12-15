@@ -86,7 +86,11 @@ void print_hex(int num){
       }
   }
 }
-
+void print_spaces(int width){
+  for (int i =0; i<= width; i++){
+    putchar(' ');
+  }
+}
 
 void my_printf( char *str , ...){ 
     // initialize the va_list so that you can take in an unknown amount of arguments. 
@@ -114,7 +118,10 @@ void my_printf( char *str , ...){
 	      flagPlus =1;
 	      break; 
 	    }
-                case 'd':{		    
+                case 'd':{
+		  if (width >0){
+		    print_spaces(width);
+		  }
                     int value = va_arg(args, int); 
 		    if (flagPlus ==1 ){
 		      print_sign(value);
@@ -161,7 +168,7 @@ void my_printf( char *str , ...){
 	      }else{
 		int newW = *p - '0';
 		width = (width * 10) + newW;
-		printf("%d", width);
+	      
 	      }
 	    }
     }
@@ -184,5 +191,5 @@ int main(){
     my_printf("----------------------------\n");
     my_printf("%+d\n", 10);
     my_printf("%+d\n", -10);
-    my_printf("%10");
+    my_printf("%+10d", 66);
 }
