@@ -31,10 +31,27 @@ void print_number (int num) {
     // this is necessary because the first time newN would equal 0 because num = 0
     if (num >0){
       // turn the number into a character and print it
-      putchar(newN + '0');
+      putchar(newN + 48);
     }
 }
 
+void print_binary(int num){
+  int newN =0;
+  if (num !=0){
+    print_binary(num/2);
+  }
+  newN = num % 2;
+  if (num >0){
+    switch(newN){
+        case 0:
+          putchar('0');
+	  break;
+       case 1:
+          putchar('1');
+	  break;
+  }
+  }
+}
 
 // simply put the character! 
 void print_character(char c){ 
@@ -161,12 +178,18 @@ void my_printf( char *str , ...){
                     break;
 		    
                 }
+	    case 'b':{
+	      int binary = va_arg(args, int);
+	      print_binary(binary);
+	      foundM =0;
+	      break;
+	    }
            }
 	  if (*p >=48 && *p <=57 && foundM ==1){
 	      if (width ==0){
-		width = *p - '0';
+		width = *p - 48;
 	      }else{
-		int newW = *p - '0';
+		int newW = *p - 48;
 		width = (width * 10) + newW;
 	      
 	      }
@@ -191,5 +214,8 @@ int main(){
     my_printf("----------------------------\n");
     my_printf("%+d\n", 10);
     my_printf("%+d\n", -10);
-    my_printf("%+10d", 66);
+    my_printf("%+10d\n", 66);
+    my_printf("2: %b\n ", 2);
+    my_printf("7: %b\n", 7);
+    my_printf("31: %b\n", 31);
 }
