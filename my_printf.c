@@ -145,8 +145,6 @@ void my_printf( char *str , ...){
 		      print_number(value);
 		      flagPlus =0;
 		      foundM =0;
-		      
-		    
 		    }else{
 		      print_number(value);
 		      foundM =0;
@@ -184,6 +182,11 @@ void my_printf( char *str , ...){
 	      foundM =0;
 	      break;
 	    }
+	    case '*':{
+	      int widthNum =va_arg(args, int);
+	      width = widthNum;
+	      break;
+	    }
            }
 	  if (*p >=48 && *p <=57 && foundM ==1){
 	      if (width ==0){
@@ -218,4 +221,6 @@ int main(){
     my_printf("2: %b\n ", 2);
     my_printf("7: %b\n", 7);
     my_printf("31: %b\n", 31);
+    my_printf("%*d\n",10, 1);
+    my_printf("%10d",1);
 }
