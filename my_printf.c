@@ -108,6 +108,11 @@ void print_spaces(int width){
     putchar(' ');
   }
 }
+void print_zeros(int percision){
+  for (int i =0; i<= percision; i++){
+    putchar('0');
+  }
+}
 
 void my_printf( char *str , ...){ 
     // initialize the va_list so that you can take in an unknown amount of arguments. 
@@ -118,7 +123,9 @@ void my_printf( char *str , ...){
     int foundM =0;
     int flagPlus =0;
     int width =0;
-    for (const char *p = str; *p !='\0'; p++){
+    int flagPercision = 0;
+    int percision =0;
+    for (const char *p = str; *p !='\0'; p++)  {
         // if no percent sign is encountered, put the character to stdout. 
      
       if (*p != '%' && foundM ==0){
@@ -138,6 +145,9 @@ void my_printf( char *str , ...){
                 case 'd':{
 		  if (width >0){
 		    print_spaces(width);
+		  }
+		  if (percision >0){
+		    print_zeros(percision);
 		  }
                     int value = va_arg(args, int); 
 		    if (flagPlus ==1 ){
@@ -187,8 +197,11 @@ void my_printf( char *str , ...){
 	      width = widthNum;
 	      break;
 	    }
+	    case '.':{
+	      flagPercision = 1; 
+	    }
            }
-	  if (*p >=48 && *p <=57 && foundM ==1){
+	  if (*p >=48 && *p <=57 && foundM ==1 && flagPercision ==0){
 	      if (width ==0){
 		width = *p - 48;
 	      }else{
@@ -196,8 +209,15 @@ void my_printf( char *str , ...){
 		width = (width * 10) + newW;
 	      
 	      }
-	    }
-    }
+    }else if( *p >= 48 && *p<=57 && foundM ==1 && flagPercision ==1){
+	    if (percision==0){
+                percision = *p - 48;
+              }else{
+                int newP = *p - 48;
+                percision = (percision * 10) + newP;
+              }
+	  }
+      }
  }
 }
 int main(){
@@ -223,4 +243,8 @@ int main(){
     my_printf("31: %b\n", 31);
     my_printf("%*d\n",10, 1);
     my_printf("%10d",1);
+    my_printf("one zero? %.1d\n", 1);
+    my_printf("First %d Second %d %d\n", 1,2,3);
+    my_printf("%.10d\n", 1);
+    printf("%.10d", 1);
 }
