@@ -104,16 +104,25 @@ void print_hex(int num){
   }
 }
 void print_spaces(int width){
-  for (int i =0; i<= width; i++){
+  for (int i =0; i<width; i++){
     putchar(' ');
   }
 }
 void print_zeros(int percision){
-  for (int i =0; i<= percision; i++){
+  for (int i =0; i< percision; i++){
     putchar('0');
   }
 }
 
+int get_length (int num) {
+  int count =0;
+
+    while(num >0){
+      num = num/10;
+      count++;
+    }
+    return count;
+}
 void my_printf( char *str , ...){ 
     // initialize the va_list so that you can take in an unknown amount of arguments. 
     va_list args; 
@@ -143,13 +152,16 @@ void my_printf( char *str , ...){
 	      break; 
 	    }
                 case 'd':{
-		  if (width >0){
-		    print_spaces(width);
+		  int value = va_arg(args, int);
+		  int len_num = get_length(value); 
+		  int posWFlag = width - len_num;
+		  int posPFlag = percision - len_num;
+		  if (width >0 && posWFlag >0){ 
+		    print_spaces(width-len_num);
 		  }
-		  if (percision >0){
-		    print_zeros(percision);
+		  if (percision >0 && posPFlag >0){
+		    print_zeros(percision-len_num);
 		  }
-                    int value = va_arg(args, int); 
 		    if (flagPlus ==1 ){
 		      print_sign(value);
 		      print_number(value);
@@ -235,16 +247,18 @@ int main(){
     my_printf("Hex Test 2 ( Answer should be 64):%x\n", 100);
     my_printf("Hex Test 3  (Answer should be 7E4): %x\n", 2020);
     my_printf("----------------------------\n");
-    my_printf("%+d\n", 10);
-    my_printf("%+d\n", -10);
-    my_printf("%+10d\n", 66);
-    my_printf("2: %b\n ", 2);
-    my_printf("7: %b\n", 7);
-    my_printf("31: %b\n", 31);
-    my_printf("%*d\n",10, 1);
-    my_printf("%10d",1);
-    my_printf("one zero? %.1d\n", 1);
-    my_printf("First %d Second %d %d\n", 1,2,3);
-    my_printf("%.10d\n", 1);
-    printf("%.10d", 1);
+    my_printf("Plus Modifier test Positive Number: %+d\n", 10);
+    my_printf("Negative Modifier Test Negative Number: %+d\n", -10);
+    my_printf("----------------------------\n");
+    my_printf("Binary test (decimal number is 2): %b\n", 2);
+    my_printf("Binary Test (decimal number is 302): %b\n", 302);
+    my_printf("----------------------------\n");
+    my_printf("%10d\n",1);
+    my_printf("%*d\n", 10,1);
+    my_printf("%.10d\n",1);
+    my_printf("%10d\n",12345);
+    my_printf("%*d\n", 10,12345);
+    my_printf("%.10d\n",12345);
+    my_printf("%2d\n",12345);
+    my_printf("----------------------------\n");
 }
