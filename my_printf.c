@@ -70,9 +70,14 @@ void print_character(char c){
 // this for loop is modeled after my_printf. pass in a string and it loops through that string
 // printing each character.
 
-void print_string(const char *s ){
-   for (const char *p = s; *p !='\0'; p++){
+void print_string(const char *s, int len ){
+  int count =0; 
+   for (const char *p = s; *p!='\0'; p++){
      putchar(*p);
+     count++;
+     if (count == len){
+       break;
+     }
    }
 }
 
@@ -234,8 +239,8 @@ void my_printf( char *str , ...){
                    char *value = va_arg(args, char*);
 		   int len = get_length_str(value);
                    width_and_percision(width, percision, len);
-		    print_string(value);
-		    foundM =0;
+		   print_string(value, percision);
+		   foundM =0;
                     break;
 		    
                 }
@@ -308,6 +313,7 @@ int main(){
     my_printf("%10s\n","abcde");
     my_printf("%*s\n", 10,"abcde");
     my_printf("%.10s\n","abcde");
-    my_printf("%2s\n", "abcde");
-    printf("%.2s\n", "abcde"); 
+    my_printf("%.2s\n", "abcde");
+    printf("%.2s\n", "abcde");
+   
 }
