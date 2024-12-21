@@ -187,6 +187,9 @@ void my_printf( char *str , ...){
     int flagPercision = 0;
     int percision =0;
     int percentN =0;
+    int longFlag =0;
+    int shortFlag =0;
+    
     for (const char *p = str; *p !='\0'; p++)  {
         // if no percent sign is encountered, put the character to stdout.
       if (*p != '%' && foundM ==0){
@@ -287,7 +290,8 @@ void my_printf( char *str , ...){
 	  }
 	  if(percentN > 1){
 	    putchar('%');
-	    percentN = 0; 
+	    percentN = 0;
+	    foundM =0; 
 	  }
       }
  }
@@ -331,6 +335,6 @@ int main(){
     my_printf("%.10x\n", 16);
     printf("%.10x\n", 16);
     my_printf("\\");
-    my_printf("%%");
+    my_printf("%%d");
     
 }
