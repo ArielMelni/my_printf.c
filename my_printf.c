@@ -91,7 +91,7 @@ void print_hex(int num){
     print_hex(num/16); 
   }
   //get the last number by getting the remainder when moding by 16.
-  newN = num %16;
+  newN = num % 16;
   // make sure it is the second return from recursion, in the first return num =0; 
   if (num >0){
     // if the remainder is greater than 9, then the corresponding alphabetical character should be printed
@@ -116,7 +116,7 @@ void print_hex(int num){
        	   my_printf("%c", 'F');
 	   break; 
         default:
-	   my_printf("%d", newN);
+	   putchar(newN + 48);
       }
   }
 }
@@ -137,7 +137,6 @@ void print_zeros(int percision){
 // much simpler to use a while loop!
 
 int get_length (int num) {
-  
   int count =0;
 
     while(num >0){
@@ -147,7 +146,14 @@ int get_length (int num) {
     }
     return count;
 }
-
+int get_length_hex(int hexN){
+  int count =0;
+  while(hexN > 0){
+    hexN = hexN/16;
+    count++; 
+  }
+  return count; 
+}
 int get_length_str(const char *s){
   
   int count =0;
@@ -180,7 +186,7 @@ void my_printf( char *str , ...){
     int width =0;
     int flagPercision = 0;
     int percision =0;
-
+    int percentN =0;
     for (const char *p = str; *p !='\0'; p++)  {
         // if no percent sign is encountered, put the character to stdout.
       if (*p != '%' && foundM ==0){
@@ -190,12 +196,14 @@ void my_printf( char *str , ...){
       
       if (*p == '%'){
 	foundM =1;
+	percentN++; 
       }
       // if a % is encountered. 
       if (foundM ==1){
 	// this switch case lists all the posible cases that can happen after a % is encountered and acts effectively in each case. 
             switch (*p) {
                 // if the character is a digit
+	    
 	    case '+':{
 	      flagPlus =1;
 	      break; 
@@ -227,9 +235,11 @@ void my_printf( char *str , ...){
                 // if the character is a hex digit 
                 case 'x': {
                     int value = va_arg(args, int);
+		    int len_num = get_length_hex(value);
+		    width_and_percision(width, percision, len_num);
 		    print_hex(value);
 		    foundM =0;
-		    //   my_printf("found hex ");
+		    //my_printf("found hex ");
 		    break;
                 }
 
@@ -275,6 +285,10 @@ void my_printf( char *str , ...){
                 percision = (percision * 10) + newP;
               }
 	  }
+	  if(percentN > 1){
+	    putchar('%');
+	    percentN = 0; 
+	  }
       }
  }
 }
@@ -314,6 +328,9 @@ int main(){
     my_printf("%*s\n", 10,"abcde");
     my_printf("%.10s\n","abcde");
     my_printf("%.2s\n", "abcde");
-    printf("%.2s\n", "abcde");
-   
+    my_printf("%.10x\n", 16);
+    printf("%.10x\n", 16);
+    my_printf("\\");
+    my_printf("%%");
+    
 }
