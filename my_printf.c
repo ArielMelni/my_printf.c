@@ -96,7 +96,7 @@ void print_hex(int num){
   if (num >0){
     // if the remainder is greater than 9, then the corresponding alphabetical character should be printed
     // if the remainder is less than or equal to 9, just print the number. 
-     switch(newN){
+    switch(newN){
         case 10:
            my_printf("%c", 'A');
            break;
@@ -206,27 +206,49 @@ void my_printf( char *str , ...){
 	// this switch case lists all the posible cases that can happen after a % is encountered and acts effectively in each case. 
             switch (*p) {
                 // if the character is a digit
-	    
-	    case '+':{
-	      flagPlus =1;
+	    case 'l':{
+	      longFlag =1;
+
 	      break; 
 	    }
-	      
-                case 'd':{
-		  int value = va_arg(args, int);
-		  int len_num = get_length(value);
-                  width_and_percision(width, percision, len_num);                 
-		    if (flagPlus ==1 ){
-		      print_sign(value);
-		      print_number(value);
-		      flagPlus =0;
-		      foundM =0;
-		    }else{
-		      print_number(value);
-		      foundM =0;
-		    }
-                    break;
-                }
+	    case 'h':{
+	      shortFlag =1;
+	      break; 
+	    }
+	       case '+':{
+	          flagPlus =1;
+	          break; 
+	       }
+	       
+               case 'd':{
+	     	      
+     
+		   
+		 int val = va_arg(args, int);
+
+		 if (longFlag ==1){
+		   printf("making long");
+		   val = (long) val;
+		   longFlag =0; 
+		 } else if (shortFlag ==1){
+		   val = (short) val;
+		   printf("making short"); 
+		 }
+		 
+		 int len_num = get_length(val);
+		 width_and_percision(width, percision, len_num);
+		 if (flagPlus ==1 ){
+                    print_sign(val);
+                    flagPlus =0;
+                  }
+		 
+		   print_number(val);
+		   foundM =0; 
+		 
+		   break;
+	        }
+                    
+                
                 // if the character is a character
 
                 case 'c': {
@@ -328,13 +350,15 @@ int main(){
     my_printf("%10s\n", "a");
     my_printf("%*s\n", 10,"a");
     my_printf("%.10s\n", "a");
-    my_printf("%10s\n","abcde");
+    my_printf("Spaces, width: %10s\n","abcde");
     my_printf("%*s\n", 10,"abcde");
     my_printf("%.10s\n","abcde");
     my_printf("%.2s\n", "abcde");
     my_printf("%.10x\n", 16);
-    printf("%.10x\n", 16);
+   
     my_printf("\\");
     my_printf("%%d");
-    
+     my_printf("----------------------------\n");
+    my_printf("%ld", 100000);
+    my_printf("%hd", 1);
 }
