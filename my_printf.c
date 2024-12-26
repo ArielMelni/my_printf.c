@@ -8,9 +8,36 @@ void print_sign(int num){
   }
 
 }
+// gets an int and prints the int as a string                                                                                                                                              
+int print_long(long num) {
+  if (num< 0){
+    putchar('-');
+    num = -num;
+  }
+  int newN =0;
+  // because you need to print the first digit,                                                                                                                                            
+  //chop the entire num down.                                                                                                                                                              
+  //for this reason use recursion to print each character as returning from recursion occurs.                                                                                              
+    if (num !=0){
+      print_long(num/10);
+    }
+    // This line will actually collect the digit.                                                                                                                                          
+    newN = num % 10;
+
+    // this is necessary because the first time newN would equal 0 because num = 0                                                                                                         
+    // This is also a result of the recursion that num will be fully chopped until it is 0,                                                                                                
+    // the function still works because as it returns from the next iteration of recursion the first number                                                                                
+    // will successfully be printed.                                                                                                                                                       
+
+    if (num >0){
+      // turn the number into a character by adding 48 which is the offset from a number to a character on the ascii                                                                       
+      // chart. putchar will turn the decimal number into a character.                                                                                                                     
+      putchar(newN + 48);
+    }
+}
 
 // gets an int and prints the int as a string
-void print_number (int num) { 
+int  print_number (int num) { 
   if (num< 0){
     putchar('-');
     num = -num;
@@ -61,7 +88,8 @@ void print_binary(int num){
   }
   }
 }
-
+// prints binary number ( uses the same logic as print_number, but instead of base 10, base 2)                                                                                            
+    // if the remainder is a 0, print 0, if the remainder is 1, print 1                                                                                               
 // simply put the character! 
 void print_character(char c){ 
     putchar(c); 
@@ -201,14 +229,28 @@ int get_length_str(const char *s){
 
    return count; 
 }
-int width_and_percision(int width, int percision, int len){ 
-  int posWFlag = width - len;
-  int posPFlag = percision - len;
-  if (width >0 && posWFlag >0){
-    print_spaces(posWFlag);
+void  width_and_percision_left(int width, int percision, int len, int align){
+  if (align ==1){
+    int posWFlag = width - len;
+    int posPFlag = percision - len;
+    if (width >0 && posWFlag >0){
+      print_spaces(posWFlag);
+    }
+    if (percision >0 && posPFlag >0){
+      print_zeros(posPFlag);
+    }
   }
-  if (percision >0 && posPFlag >0){
-    print_zeros(posPFlag);
+}
+void  width_and_percision_right(int width, int percision, int len, int align){
+  if (align == 0){
+    int posWFlag = width - len;
+    int posPFlag = percision - len;
+    if (width >0 && posWFlag >0){
+      print_spaces(posWFlag);
+    }
+    if (percision >0 && posPFlag >0){
+      print_zeros(posPFlag);
+    }
   }
 }
 void my_printf( char *str , ...){ 
@@ -225,9 +267,7 @@ void my_printf( char *str , ...){
     int flagPercision = 0;
     int percision =0;
     int percentN =0;
-    int longFlag =0;
-    int shortFlag =0;
-    int flagLeftA =0; 
+    int align =0; 
     
     for (const char *p = str; *p !='\0'; p++)  {
         // if no percent sign is encountered, put the character to stdout.
@@ -245,15 +285,7 @@ void my_printf( char *str , ...){
 	// this switch case lists all the posible cases that can happen after a % is encountered and acts effectively in each case. 
             switch (*p) {
                 // if the character is a digit
-	    case 'l':{
-	      longFlag =1;
-
-	      break; 
-	    }
-	    case 'h':{
-	      shortFlag =1;
-	      break; 
-	    }
+	 
 	       case '+':{
 	          flagPlus =1;
 	          break; 
@@ -261,26 +293,17 @@ void my_printf( char *str , ...){
 	       
                case 'd':{
 		 int val = va_arg(args, int);
-
-		 if (longFlag ==1){
-		   printf("making long");
-		   val = (long) val;
-		   longFlag =0; 
-		 } else if (shortFlag ==1){
-		   val = (short) val;
-		   printf("making short"); 
-		 }
-		 
 		 int len_num = get_length(val);
-		 width_and_percision(width, percision, len_num);
+		 width_and_percision_right(width, percision, len_num, align);
 		 if (flagPlus ==1 ){
                     print_sign(val);
                     flagPlus =0;
                   }
 		 
 		   print_number(val);
+		   width_and_percision_left(width, percision, len_num, align);
 		   foundM =0; 
-		 
+		   align =0;
 		   break;
 	        }
                     
@@ -297,9 +320,11 @@ void my_printf( char *str , ...){
                 case 'X': {
                     int value = va_arg(args, int);
 		    int len_num = get_length_hex(value);
-		    width_and_percision(width, percision, len_num);
+		    width_and_percision_right(width, percision, len_num, align);
 		    print_UppHex(value);
+		    width_and_percision_left(width, percision, len_num, align);
 		    foundM =0;
+		    align =0; 
 		    //my_printf("found hex ");
 		    break;
                 }
@@ -309,9 +334,11 @@ void my_printf( char *str , ...){
 		 
                    char *value = va_arg(args, char*);
 		   int len = get_length_str(value);
-                   width_and_percision(width, percision, len);
+                   width_and_percision_right(width, percision, len, align);
 		   print_string(value, percision);
+		   width_and_percision_left(width, percision, len, align);
 		   foundM =0;
+		   align =0; 
                     break;
 		    
                 }
@@ -319,6 +346,7 @@ void my_printf( char *str , ...){
 	      int binary = va_arg(args, int);
 	      print_binary(binary);
 	      foundM =0;
+	      align =0; 
 	      break;
 	    }
 	    case '*':{
@@ -327,16 +355,23 @@ void my_printf( char *str , ...){
 	      break;
 	    }
 	    case '.':{
-	      flagPercision = 1; 
+	      flagPercision = 1;
+	      break;
 	    }
 	    case 'x':{
 	       int value = va_arg(args, int);
                int len_num = get_length_hex(value);
-               width_and_percision(width, percision, len_num);
+               width_and_percision_right(width, percision, len_num, align);
                print_LowHex(value);
+	        width_and_percision_left(width, percision, len_num, align);
                foundM =0;
+	       align =0;
                     //my_printf("found hex ");                                                                                                                                                                       
                break;
+	    }
+	    case '-':{
+
+	      align =1; 
 	    }
 	    
            }
@@ -403,8 +438,7 @@ int main(){
     my_printf("%.10x\n", 16);
    
     my_printf("\\");
-    my_printf("%%d");
+    my_printf("%%d\n");
      my_printf("----------------------------\n");
-    my_printf("%ld", 100000);
-    my_printf("%hd", 1);
+     my_printf("%-.10s", "hi");
 }
