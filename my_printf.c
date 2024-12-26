@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdarg.h>
-
+char int_to_char( int n){
+  return n + '0';
+}
 // prints a + 
 void print_sign(int num){
   if (num >0){
@@ -32,7 +34,7 @@ int print_long(long num) {
     if (num >0){
       // turn the number into a character by adding 48 which is the offset from a number to a character on the ascii                                                                       
       // chart. putchar will turn the decimal number into a character.                                                                                                                     
-      putchar(newN + 48);
+      putchar(int_to_char(newN));
     }
 }
 
@@ -60,7 +62,7 @@ int  print_number (int num) {
     if (num >0){
       // turn the number into a character by adding 48 which is the offset from a number to a character on the ascii
       // chart. putchar will turn the decimal number into a character. 
-      putchar(newN + 48);
+      putchar(int_to_char(newN));
     }
 }
 
@@ -181,7 +183,7 @@ void print_LowHex(int num){
            my_printf("%c", 'f');
            break;
         default:
-           putchar(newN + 48);
+	  putchar(int_to_char(newN));
       }
   }
 }
