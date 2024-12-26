@@ -84,11 +84,11 @@ void print_string(const char *s, int len ){
 void my_printf( char *str,...);
 // this function prints a decimal number as a hexadecimal number, modeled after print_number
 
-void print_hex(int num){
+void print_UppHex(int num){
   int newN =0;
   //cutt the digit down to the first one. Instead of using 10, we are base 16. 
   if (num !=0){
-    print_hex(num/16); 
+    print_UppHex(num/16); 
   }
   //get the last number by getting the remainder when moding by 16.
   newN = num % 16;
@@ -120,6 +120,44 @@ void print_hex(int num){
       }
   }
 }
+
+void print_LowHex(int num){
+  int newN =0;
+  //cutt the digit down to the first one. Instead of using 10, we are base 16.                                                                                                                                                                                                                              
+  if (num !=0){
+    print_LowHex(num/16);
+  }
+  //get the last number by getting the remainder when moding by 16.                                                                                                                                                                                                                                         
+  newN = num % 16;
+  // make sure it is the second return from recursion, in the first return num =0;                                                                                                                                                                                                                          
+  if (num >0){
+    // if the remainder is greater than 9, then the corresponding alphabetical character should be printed                                                                                                                                                                                                  
+    // if the remainder is less than or equal to 9, just print the number.                                                                                                                                                                                                                                  
+    switch(newN){
+        case 10:
+           my_printf("%c", 'a');
+           break;
+        case 11:
+           my_printf("%c", 'b');
+           break;
+        case 12:
+           my_printf("%c", 'c');
+           break;
+        case 13:
+           my_printf("%c", 'd');
+           break;
+        case 14:
+           my_printf("%c", 'e');
+           break;
+        case 15:
+           my_printf("%c", 'f');
+           break;
+        default:
+           putchar(newN + 48);
+      }
+  }
+}
+
 // prints width amount of spaces.
 void print_spaces(int width){
   for (int i =0; i<width; i++){
@@ -189,6 +227,7 @@ void my_printf( char *str , ...){
     int percentN =0;
     int longFlag =0;
     int shortFlag =0;
+    int flagLeftA =0; 
     
     for (const char *p = str; *p !='\0'; p++)  {
         // if no percent sign is encountered, put the character to stdout.
@@ -221,9 +260,6 @@ void my_printf( char *str , ...){
 	       }
 	       
                case 'd':{
-	     	      
-     
-		   
 		 int val = va_arg(args, int);
 
 		 if (longFlag ==1){
@@ -258,11 +294,11 @@ void my_printf( char *str , ...){
                     break; 
                 }
                 // if the character is a hex digit 
-                case 'x': {
+                case 'X': {
                     int value = va_arg(args, int);
 		    int len_num = get_length_hex(value);
 		    width_and_percision(width, percision, len_num);
-		    print_hex(value);
+		    print_UppHex(value);
 		    foundM =0;
 		    //my_printf("found hex ");
 		    break;
@@ -293,6 +329,16 @@ void my_printf( char *str , ...){
 	    case '.':{
 	      flagPercision = 1; 
 	    }
+	    case 'x':{
+	       int value = va_arg(args, int);
+               int len_num = get_length_hex(value);
+               width_and_percision(width, percision, len_num);
+               print_LowHex(value);
+               foundM =0;
+                    //my_printf("found hex ");                                                                                                                                                                       
+               break;
+	    }
+	    
            }
 	  if (*p >=48 && *p <=57 && foundM ==1 && flagPercision ==0){
 	      if (width ==0){
