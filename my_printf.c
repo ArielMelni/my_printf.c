@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdarg.h>
-
+#include "my_printf.h"
+// turn an int into a char
 char int_to_char( int n){
   return n + '0';
 }
@@ -12,7 +13,7 @@ void print_sign(int num){
 
 }
 // gets an int and prints the int as a string                                                                                                                                              
-int print_long(long num) {
+void  print_long_value(long num) {
   if (num< 0){
     putchar('-');
     num = -num;
@@ -22,7 +23,7 @@ int print_long(long num) {
   //chop the entire num down.                                                                                                                                                              
   //for this reason use recursion to print each character as returning from recursion occurs.                                                                                              
     if (num !=0){
-      print_long(num/10);
+      print_long_value(num/10);
     }
     // This line will actually collect the digit.                                                                                                                                          
     newN = num % 10;
@@ -113,12 +114,17 @@ void print_string(const char *s, int len ){
    }
 }
 
-void my_printf( char *str,...);
+int  my_printf( char *str,...);
 // this function prints a decimal number as a hexadecimal number, modeled after print_number
 
 void print_UppHex(int num){
+  if (num< 0){
+    putchar('-');
+    num = -num;
+  }
   int newN =0;
   //cutt the digit down to the first one. Instead of using 10, we are base 16. 
+
   if (num != 0){
     print_UppHex(num/16); 
   }
@@ -154,6 +160,11 @@ void print_UppHex(int num){
 }
 
 void print_LowHex(int num){
+  if (num< 0){
+    putchar('-');
+    num = -num;
+  }
+  
   int newN =0;
   //cutt the digit down to the first one. Instead of using 10, we are base 16.                                                                                                                                                                                                                              
   if (num !=0){
@@ -233,13 +244,37 @@ int get_length_str(const char *s){
 
    return count; 
 }
-void  width_and_percision_left(int width, int percision, int len, int align, int zeroPadFlag){
+// only used for strings because strings won't do percision if it wants to add 0's
+void only_width_left( int width, int len, int align, int zeroPadFlag){
+  if (align == 1){
+    int posWFlag = width - len;
+      if ( width>0 && posWFlag >0 && zeroPadFlag ==0){
+	print_spaces(posWFlag);
+      }
+    if( width >0 && posWFlag>0 && zeroPadFlag ==1){
+      print_zeros(posWFlag); 
+    }
+  }
+}
+void  only_width_right(int width, int len, int align, int zeroPadFlag){
+if (align == 0){
+  int posWFlag = width - len;
+      if ( width>0 && posWFlag >0 && zeroPadFlag ==0){
+        print_spaces(posWFlag);
+      }
+    if( width >0 && posWFlag>0 && zeroPadFlag ==1){
+      print_zeros(posWFlag);
+    }
+  }
+ 
+}
+void width_and_percision_left(int width, int percision, int len, int align, int zeroPadFlag, int flagPlus){
   
   if (align ==1){
-    int posWFlag = width - len;
-    int posPFlag = percision - len;
+    int posWFlag =  (width - len) - flagPlus;
+    int posPFlag = (percision - len) - flagPlus;
     
-    if (width>0 && posWFlag >0){
+    if (width>0 && posWFlag >0 && zeroPadFlag ==0){
       print_spaces(posWFlag);
     }
     if ( width> 0 && posWFlag >0 && zeroPadFlag ==1){
@@ -250,10 +285,10 @@ void  width_and_percision_left(int width, int percision, int len, int align, int
     }
   }
 }
-void  width_and_percision_right(int width, int percision, int len, int align, int zeroPadFlag){
+void  width_and_percision_right(int width, int percision, int len, int align, int zeroPadFlag, int flagPlus){
   if (align == 0){
-    int posWFlag = width - len;
-    int posPFlag = percision - len;
+    int posWFlag = width - len - flagPlus;
+    int posPFlag = percision - len - flagPlus;
     if (width >0 && posWFlag >0 && zeroPadFlag ==0){
       print_spaces(posWFlag);
     }
@@ -263,9 +298,29 @@ void  width_and_percision_right(int width, int percision, int len, int align, in
     if (percision >0 && posPFlag >0){
       print_zeros(posPFlag);
     }
+     
   }
 }
-void my_printf( char *str , ...){ 
+int  get_length_long(long longV){
+   int count =0;
+    while( longV >0){
+      // keep chopping down the number                                                                                                                                
+      longV = longV/10;
+      count++;
+    }
+    return count;
+
+
+
+}
+void print_long( long longV, int width, int percision, int len_num, int align, int zeroPadFlag, int flagPlus){
+  width_and_percision_right(width, percision, len_num, align, zeroPadFlag, flagPlus);
+
+  print_long_value(longV);
+
+  width_and_percision_left(width, percision, len_num, align, zeroPadFlag, flagPlus);
+}
+int  my_printf( char *str , ...){ 
     // initialize the va_list so that you can take in an unknown amount of arguments. 
     va_list args; 
     va_start(args, str); 
@@ -276,13 +331,15 @@ void my_printf( char *str , ...){
     int foundM =0;
     int flagPlus =0;
     int width =0;
+    int count =0;
     int flagPercision = 0;
     int percision =0;
     int percentN =0;
     int align =0;
     int zeroPadFlag =0; 
-    
-    for (const char *p = str; *p !='\0'; p++)  {
+    int longFlag =0;
+    int forLoopFlag =0;
+    for (char *p = str; *p !='\0'; p++)  {
         // if no percent sign is encountered, put the character to stdout.
       if (*p != '%' && foundM ==0){
             putc(*p, stdout);
@@ -291,36 +348,60 @@ void my_printf( char *str , ...){
       
       if (*p == '%'){
 	foundM =1;
-	percentN++; 
       }
       // if a % is encountered. 
       if (foundM ==1){
 	// this switch case lists all the posible cases that can happen after a % is encountered and acts effectively in each case. 
             switch (*p) {
                 // if the character is a digit
-	 
+	      
 	       case '+':{
 	          flagPlus =1;
 	          break; 
 	       }
 	       
                case 'd':{
+		 if (longFlag ==1){
+		   long longV = va_arg(args, long);
+		   int len_num = get_length_long(longV);
+		   print_long(longV, width, percision,len_num, align, zeroPadFlag, flagPlus);  
+		   foundM =0;
+		   longFlag =0;
+		   align =0;
+                   width =0;
+                   percision =0;
+                   zeroPadFlag =0;
+		   flagPlus =0;
+		   break;
+		 }
 		 int val = va_arg(args, int);
-		 
+		 if (val == 0){
+		   putchar('0');
+		   foundM =0;
+                   longFlag =0;
+                   align =0;
+                   width =0;
+                   percision =0;
+                   zeroPadFlag =0;
+                   flagPlus =0;
+		   break;
+		 }
 		 int len_num = get_length(val);
-		 width_and_percision_right(width, percision, len_num, align, zeroPadFlag);
+		 width_and_percision_right(width, percision, len_num, align, zeroPadFlag, flagPlus);
+		 //count = count + width_and_percision_right(width, percision, len_num, align, zeroPadFlag, flagPlus);
 		 if (flagPlus ==1 ){
                     print_sign(val);
-                    flagPlus =0;
+                    
                   }
-		   print_number(val);
-		   width_and_percision_left(width, percision, len_num, align, zeroPadFlag);
-		   foundM =0; 
-		   align =0;
-		   width =0;
-		   percision =0;
-		   zeroPadFlag =0; 
-		   break;
+		  print_number(val);
+		  width_and_percision_left(width, percision, len_num, align, zeroPadFlag, flagPlus);
+		  foundM =0; 
+		  align =0;
+		  width =0;
+		  percision =0;
+		  zeroPadFlag =0;
+		  flagPlus=0;
+		  break;
 		 
 	        }
                     
@@ -328,23 +409,46 @@ void my_printf( char *str , ...){
                 // if the character is a character
 
                 case 'c': {
+		    int len_num = 1; 
                     int value = va_arg(args, int); 
-                    print_character(value);
+                    width_and_percision_right(width, percision, len_num, align, zeroPadFlag, flagPlus);
+		    //count = count + width_and_percision_right(width, percision, len_num, align, zeroPadFlag, flagPlus);
+		    print_character(value);
+		    width_and_percision_left(width, percision, len_num, align, zeroPadFlag, flagPlus);
 		    foundM =0;
+		    width =0;
+                    percision =0;
+                    zeroPadFlag =0;
+                    flagPlus =0;
                     break; 
                 }
                 // if the character is a hex digit 
                 case 'X': {
-                    int value = va_arg(args, int);
+		   int value = va_arg(args, int);
+		  if (value == 0){
+                   putchar('0');
+
+                   foundM =0;
+                   longFlag =0;
+                   align =0;
+                   width =0;
+                   percision =0;
+                   zeroPadFlag =0;
+                   flagPlus =0;
+                   break;
+                 }
+                    
 		    int len_num = get_length_hex(value);
-		    width_and_percision_right(width, percision, len_num, align, zeroPadFlag);
+		    width_and_percision_right(width, percision, len_num, align, zeroPadFlag, flagPlus);
+		    //count = count + width_and_percision_right(width, percision, len_num, align, zeroPadFlag, flagPlus);
 		    print_UppHex(value);
-		    width_and_percision_left(width, percision, len_num, align, zeroPadFlag);
+		    width_and_percision_left(width, percision, len_num, align, zeroPadFlag, flagPlus);
 		    foundM =0;
 		    align =0;
 		    width =0;
                    percision =0;
                    zeroPadFlag =0;
+		   flagPlus =0; 
 		    //my_printf("found hex ");
 		    break;
                 }
@@ -354,15 +458,18 @@ void my_printf( char *str , ...){
 		 
                    char *value = va_arg(args, char*);
 		   int len = get_length_str(value);
-                   width_and_percision_right(width, percision, len, align, zeroPadFlag);
+		   
+		   only_width_right(width, len, align, zeroPadFlag);
+		   //count = count + only_width_right(width, len, align,zeroPadFlag);
 		   print_string(value, percision);
-		   width_and_percision_left(width, percision, len, align, zeroPadFlag);
+		   only_width_left(width, len, align, zeroPadFlag);
 		   foundM =0;
 		   align =0;
 		   width =0;
                    percision =0;
+		   flagPlus =0; 
                    zeroPadFlag =0;
-                    break;
+                   break;
 		    
                 }
 	    case 'b':{
@@ -387,25 +494,46 @@ void my_printf( char *str , ...){
 	      
 	    case 'x':{
 	       int value = va_arg(args, int);
-               int len_num = get_length_hex(value);
-               width_and_percision_right(width, percision, len_num, align, zeroPadFlag);
+	        if (value == 0){
+		  int len_num = get_length_hex(value);
+		  width_and_percision_right(width, percision, len_num, align, zeroPadFlag, flagPlus);
+                   putchar('0');
+		   width_and_percision_left(width, percision, len_num, align, zeroPadFlag, flagPlus);
+                   foundM =0;
+                   longFlag =0;
+                   align =0;
+                   width =0;
+                   percision =0;
+                   zeroPadFlag =0;
+                   flagPlus =0;
+                   break;
+		}
+		int len_num = get_length_hex(value);
+		width_and_percision_right(width, percision, len_num, align, zeroPadFlag, flagPlus);
                print_LowHex(value);
-	       width_and_percision_left(width, percision, len_num, align, zeroPadFlag);
+	       width_and_percision_left(width, percision, len_num, align, zeroPadFlag, flagPlus);
                foundM =0;
 	       align =0;
                width =0;
+	       flagPlus =0;
                percision =0;
                zeroPadFlag =0;                                                                                    
                break;
 	    }
 	    case '-':{
-	      align =1; 
+	      align =1;
+	      break;
 	    }
 	    case '0':{
 	      if(width ==0 && percision ==0){
 		zeroPadFlag =1; 
 	      }
-	    }
+	      break;
+	      case 'l':{
+		longFlag =1;
+		break;
+	      }
+	    }	    
 	    
 	    
            }
@@ -427,62 +555,14 @@ void my_printf( char *str , ...){
                 percision = (percision * 10) + newP;
               }
 	  }
-	  if(percentN > 1){
-	    putchar('%');
-	    percentN = 0;
-	    foundM =0; 
-	  }
+	  char *temp = p;
+	  temp--;
+	  if (*temp == '%' && *p =='%'){
+	      putchar('%');
+	      foundM =0;
+	    }
+	  
       }
  }
-}
-int main(){
-    my_printf("NO PERCENTS TEST\n");
-    my_printf("-------------------------\n");
-      
-    my_printf("Long Digit Test: %d  (answer should be 123455)\n", 123455);
-    my_printf("Short Digit Test: %d (answer should be 3)\n", 3);
-    my_printf("Negative Digit Test: %d (answer should be -123)\n",-123);
-    my_printf("%d", 0);
-    for(int i =0;  i<=50; i++){
-      my_printf("%d ", i);
-    }
-    my_printf("--------------------------\n"); 
-    my_printf("Character Test: %c \n",'h');
-    my_printf("--------------------------\n");
-    my_printf("String Test: %s \n", "You successfully printed this string yay!");
-    my_printf("----------------------------\n");
-    for(int i =0;  i<=50; i++){
-      my_printf("%x ", i);
-    }
-    my_printf("Hex Test 1 (Answer should be A): %x\n", 10);
-    my_printf("Hex Test 2 ( Answer should be 64):%x\n", 100);
-    my_printf("Hex Test 3  (Answer should be 7E4): %x\n", 2020);
-    my_printf("----------------------------\n");
-    my_printf("Plus Modifier test Positive Number: %+d\n", 10);
-    my_printf("Negative Modifier Test Negative Number: %+d\n", -10);
-    my_printf("----------------------------\n");
-    my_printf("Binary test (decimal number is 2): %b\n", 2);
-    my_printf("Binary Test (decimal number is 302): %b\n", 302);
-    my_printf("----------------------------\n");
-    my_printf("%10d\n",1);
-    my_printf("%*d\n", 10,1);
-    my_printf("%.10d\n",1);
-    my_printf("%10d\n",12345);
-    my_printf("%*d\n", 10,12345);
-    my_printf("%.10d\n",12345);
-    my_printf("%2d\n",12345);
-    my_printf("----------------------------\n");
-    my_printf("%10s\n", "a");
-    my_printf("%*s\n", 10,"a");
-    my_printf("%.10s\n", "a");
-    my_printf("Spaces, width: %10s\n","abcde");
-    my_printf("%*s\n", 10,"abcde");
-    my_printf("%.10s\n","abcde");
-    my_printf("%.2s\n", "abcde");
-    my_printf("%.10x\n", 16);
-   
-    my_printf("\\");
-    my_printf("%%d\n");
-     my_printf("----------------------------\n");
-     my_printf("%03d",5 );
+    return 1; 
 }
