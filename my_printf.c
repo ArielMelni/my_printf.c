@@ -61,7 +61,7 @@ int  print_number (int num) {
 }
 
 // prints binary number ( uses the same logic as print_number, but instead of base 10, base 2)
-void print_binary(int num){
+void print_binary(unsigned int num){
   
   int newN =0;
   // recursively cut num with base of 2
@@ -362,15 +362,15 @@ int  my_printf( char *str , ...){
 		   // long will take care of width and percision itself. 
 		   int amountW = width - len_num - flagPlus;
 		   int amountP = percision - len_num - flagPlus; 
-		   if (width >0){
+		   if (amountW >0){
 		     count = count + width; 
 		   }
-		   else if (percision>0){
+		   else if (amountP>0){
 
 		     count = count + percision; 
 		   }
 		   else{
-		     count = count + len_num; 
+		     count = count + len_num + flagPlus; 
 		   }
 		   print_long(longV, width, percision,len_num, align, zeroPadFlag, flagPlus);  
 		   
@@ -379,6 +379,7 @@ int  my_printf( char *str , ...){
 		   longFlag =0;
 		   align =0;
                    width =0;
+		   flagPercision =0;
                    percision =0;
                    zeroPadFlag =0;
 		   flagPlus =0;
@@ -395,6 +396,7 @@ int  my_printf( char *str , ...){
 		   foundM =0;
                    longFlag =0;
                    align =0;
+		   flagPercision =0;
                    width =0;
                    percision =0;
                    zeroPadFlag =0;
@@ -403,7 +405,7 @@ int  my_printf( char *str , ...){
 		 }
 		 
                  int amountW = width - len - flagPlus;
-                   int amountP = percision - len - flagPlus;
+                 int amountP = percision - len - flagPlus;
 		  
 		 if (amountW >0){
                      count = count + width;
@@ -432,6 +434,7 @@ int  my_printf( char *str , ...){
 		  foundM =0; 
 		  align =0;
 		  width =0;
+		  flagPercision =0;
 		  percision =0;
 		  zeroPadFlag =0;
 		  flagPlus=0;
@@ -442,31 +445,43 @@ int  my_printf( char *str , ...){
                 // if the character is a character
 
                 case 'c': {
-		    int len_num = 1; 
-                    int value = va_arg(args, int); 
+		    int len = 1; 
+                    int value = va_arg(args, int);
+		    int amountW = width - len - flagPlus;
+
+                   if (amountW >0){
+                     count = count + width;
+                   }else if(percision >0){
+                     count = count + percision;
+                   }
+
+                   else{
+                     count = count + len + flagPlus;
+                   }
+
 		    // deal with width and percision
-		    width_and_percision_right(width, percision, len_num, align, zeroPadFlag, flagPlus);
-		    
+		    only_width_right(width, len, align, zeroPadFlag);
 		    print_character(value);
-		    width_and_percision_left(width, percision, len_num, align, zeroPadFlag, flagPlus);
+		    only_width_left(width, len, align, zeroPadFlag);
 
 		    // reset flags and break
 		    foundM =0;
+		    flagPercision =0;
 		    width =0;
                     percision =0;
                     zeroPadFlag =0;
                     flagPlus =0;
-		    
-		    break; 
+      		    break; 
                 }
                 // if the character is a hex digit 
                 case 'X': {
 		   int value = va_arg(args,int);
-		    int len_num = get_length_hex(value);
-
+		   int len_num = get_length_hex(value);
+		    
 		   // acount for edgge case 0, and reset flags. 
 		  if (value == 0){
-		   int len_num = get_length_hex(value);
+
+		    count = count+1; 
                    print_edge_case_zero(width, percision, len_num, align, zeroPadFlag, flagPlus);
 		  
 		   // reset flags and break                                                                                             
@@ -474,13 +489,28 @@ int  my_printf( char *str , ...){
                    longFlag =0;
                    align =0;
                    width =0;
+		   flagPercision =0;
                    percision =0;
                    zeroPadFlag =0;
                    flagPlus =0;
                    break;
                  }
+		  //		  printf("width %d", width);
+		  // printf("percision %d", percision); 
 		    
-		    
+		   int amountW = width - len_num - flagPlus;
+                   int amountP = percision - len_num - flagPlus;
+                   if (amountW >0){
+                     count = count + width;
+                   }
+                   else if (amountP>0){
+
+                     count = count + percision;
+                   }
+                   else{
+                     count = count + len_num + flagPlus;
+                   }
+
 		    // cast to an unsigned int to deal with negative hex values.
 		    value = (unsigned int) value;
 		    // deal with width and percision 
@@ -492,6 +522,7 @@ int  my_printf( char *str , ...){
 		    // reset flags
 		    foundM =0;
 		    align =0;
+		    flagPercision =0;
 		    width =0;
                     percision =0;
                     zeroPadFlag =0;
@@ -506,6 +537,19 @@ int  my_printf( char *str , ...){
                    char *value = va_arg(args, char*);
 		   int len = get_length_str(value);
 		   // only width is applicable to strings in printf 
+
+		   int amountW = width - len - flagPlus;
+                   
+                   if (amountW >0){
+                     count = count + width;
+                   }else if(percision >0){
+		     count = count + percision; 
+		   }
+                   
+                   else{
+                     count = count + len + flagPlus;
+                   }
+
 		   only_width_right(width, len, align, zeroPadFlag);
 		   //only print percision's length 
 		   print_string(value, percision);
@@ -516,13 +560,14 @@ int  my_printf( char *str , ...){
 		   align =0;
 		   width =0;
                    percision =0;
-		   flagPlus =0; 
+		   flagPlus =0;
+		   flagPercision =0;
                    zeroPadFlag =0;
                    break;
 		    
                 }
 	    case 'b':{
-	      int binary = va_arg(args, int);
+	      unsigned int binary = va_arg(args, unsigned int);
 	      if (binary == 0){
 		//print_edge_case_zero(width, percision, 8, align, zeroPadFlag, flagPlus);
 
@@ -541,6 +586,7 @@ int  my_printf( char *str , ...){
               longFlag =0;
               align =0;
               width =0;
+	      flagPercision =0;
               percision =0;
               zeroPadFlag =0;
               flagPlus =0;
@@ -564,7 +610,7 @@ int  my_printf( char *str , ...){
 	       int value = va_arg(args, int);
 	       int len_num = get_length_hex(value);
 	       if (value == 0){
-		  int len_num = get_length_hex(value);
+		  
                    print_edge_case_zero(width, percision, len_num, align, zeroPadFlag, flagPlus);
 
                    // reset flags and break                                                                                            
@@ -574,11 +620,25 @@ int  my_printf( char *str , ...){
                    align =0;
                    width =0;
                    percision =0;
+		   flagPercision =0;
                    zeroPadFlag =0;
                    flagPlus =0;
                    break;
                  } 
 	       value = (unsigned int) value; 
+
+	       int amountW = width - len_num - flagPlus;
+               int amountP = percision - len_num - flagPlus;
+               if (amountW >0){
+                     count = count + width;
+                   }
+               else if (amountP>0){
+
+        	 count = count + percision;
+                }
+                else{
+                     count = count + len_num + flagPlus;
+                }
 	       
 	       width_and_percision_right(width, percision, len_num, align, zeroPadFlag, flagPlus);
                print_LowHex(value);
@@ -588,7 +648,7 @@ int  my_printf( char *str , ...){
                width =0;
 	       flagPlus =0;
                percision =0;
-               zeroPadFlag =0;                                                                                    
+               zeroPadFlag =0;                                                                                           flagPercision =0;
                break;
 	    }
 	    case '-':{
@@ -623,7 +683,7 @@ int  my_printf( char *str , ...){
 	      
 	      }
 	    // do the same for percision as done for width! 
-	  }else if( *p >= 48 && *p<=57 && foundM ==1){
+	  }else if( *p >= 48 && *p<=57 && foundM ==1 && flagPercision ==1){
 	    if (percision==0){
                 percision = *p - 48;
               }else{
@@ -642,7 +702,7 @@ int  my_printf( char *str , ...){
 	      putchar('%');
 	      foundM =0;
 	    }
-	  
+	  //	  printf("Width: %d, Percision %d", width, percision); 
       }
  }
     return count; 
