@@ -28,6 +28,29 @@ short: if an 'h' is encountered after a % (then a d) supports a short type integ
 There are also three creative additions to printf in my_printf: 
 
 1. binary numbers: if a %b is encountered than the integer value will be printed as a binary numbers (negative numbers are printed as unsigned binary numbers) 
+
 2. twos complement: if a %! is encountered than the two's complement integer value of the inputted integer will be printed. 
-3. for loop: if a %f is encountered than 
+
+3. for loop: if a %f is encountered than i would be the first argument and the digit value would be the second and a line like this would be printed: 
+
+"When i = %d (the i value inputted) , the int value is %d (the value inputted) \n"
+
+The advantage to %f is that if you want to debug and print to the screen the values of i as it goes through the for loop, it is very convienient to simply write %f, with i and value immediately after. 
+
+my_printf returns the amount of successful characters that were printed. 
+
+Included in this repository is: 
+
+1. my_printf.c: the code 
+2. my_printf.h: header file necessary to run my tests
+3. test_my_printf.c: my tests file
+4. my_printf_output_tests.txt: my output file after my tests were run
+
+In order to run my tests, these commands should be run on the command line: 
+
+gcc -o test_runner my_printf.c test_my_printf.c
+./test_runner
+
+
+
 
