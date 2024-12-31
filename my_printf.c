@@ -330,10 +330,12 @@ int  my_printf( char *str , ...){
     int zeroPadFlag =0; 
     int longFlag =0;
     int forLoopFlag =0;
+     
     for (char *p = str; *p !='\0'; p++)  {
         // if no percent sign is encountered, put the character to stdout.
       if (*p != '%' && foundM ==0){
             putc(*p, stdout);
+	    count++; 
         }
       // if a percent sign is encountered, make sure that the %d, %c, %s... can identify that state.
       
@@ -358,8 +360,20 @@ int  my_printf( char *str , ...){
 		   long longV = va_arg(args, long);
 		   int len_num = get_length_long(longV);
 		   // long will take care of width and percision itself. 
-		   print_long(longV, width, percision,len_num, align, zeroPadFlag, flagPlus);  
+		   int amountW = width - len_num - flagPlus;
+		   int amountP = percision - len_num - flagPlus; 
+		   if (width >0){
+		     count = count + width; 
+		   }
+		   else if (percision>0){
 
+		     count = count + percision; 
+		   }
+		   else{
+		     count = count + len_num; 
+		   }
+		   print_long(longV, width, percision,len_num, align, zeroPadFlag, flagPlus);  
+		   
 		   // reset flags and break
 		   foundM =0;
 		   longFlag =0;
@@ -387,6 +401,20 @@ int  my_printf( char *str , ...){
                    flagPlus =0;
 		   break;
 		 }
+		 
+                 int amountW = width - len - flagPlus;
+                   int amountP = percision - len - flagPlus;
+		  
+		 if (amountW >0){
+                     count = count + width;
+                   }
+                   else if (amountP >0){
+
+                     count = count + percision;
+                   }
+                   else{
+                     count = count + len + flagPlus;
+                   }
 		 
 		 // deal with width and percision 
 		 width_and_percision_right(width, percision, len, align, zeroPadFlag, flagPlus);
@@ -617,5 +645,5 @@ int  my_printf( char *str , ...){
 	  
       }
  }
-    return 1; 
+    return count; 
 }
