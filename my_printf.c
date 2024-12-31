@@ -61,8 +61,7 @@ int  print_number (int num) {
 }
 
 // prints binary number ( uses the same logic as print_number, but instead of base 10, base 2)
-void print_binary(unsigned int num){
-  
+int print_binary(unsigned int num){
   int newN =0;
   // recursively cut num with base of 2
   if (num !=0){
@@ -72,17 +71,19 @@ void print_binary(unsigned int num){
   
   newN = num % 2;
   // make sure that it is the second return from the recursion. num =0 after the first if statement.
-  if (num >0){
-    // if the remainder is a 0, print 0, if the remainder is 1, print 1
+  if(num >0){
     switch(newN){
-        case 0:
-          putchar('0');
-	  break;
-       case 1:
-          putchar('1');
-	  break;
+
+    case 0:
+      putchar('0');
+      break;
+    case 1:
+      putchar('1'); 
+    }
+
+
   }
-  }
+  return 0; 
 }
                                                                                                                                                                                        
 // simply put the character! 
@@ -295,6 +296,10 @@ int  get_length_long(long longV){
     return count;
 
 
+}
+void twos_complement(int x){
+  int y = ~x + 1;
+  my_printf("%d\n", y); 
 }
 void print_long( long longV, int width, int percision, int len_num, int align, int zeroPadFlag, int flagPlus){
   width_and_percision_right(width, percision, len_num, align, zeroPadFlag, flagPlus);
@@ -569,7 +574,7 @@ int  my_printf( char *str , ...){
 	    case 'b':{
 	      unsigned int binary = va_arg(args, unsigned int);
 	      if (binary == 0){
-		//print_edge_case_zero(width, percision, 8, align, zeroPadFlag, flagPlus);
+		putchar('0'); 
 
                    foundM =0;
                    longFlag =0;
@@ -660,8 +665,20 @@ int  my_printf( char *str , ...){
 		zeroPadFlag =1; 
 	      }
 	      break;
-	      case 'l':{
+	    case 'l':{
 		longFlag =1;
+		break;
+	      }
+	    case 'f':{
+	      int i = va_arg(args, int);
+	      int val = va_arg(args, int);
+	      my_printf("When i = %d, the int value is %d\n", i,val); 
+	      break;
+	    }
+	      case '!':{
+
+		int x = va_arg(args, int);
+		twos_complement(x);
 		break;
 	      }
 	    }	    
