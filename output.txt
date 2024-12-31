@@ -1,0 +1,2460 @@
+----------my_printf--------------
+Test Regular String No Percents
+----------printf--------------
+Test Regular String No Percents
+----------my_printf--------------
+Test Regular String: alskdjfowalidfhieuhfiwhoeihufiodsuhcinouiawuhfoiwheoi
+----------printf--------------
+Test Regular String: alskdjfowalidfhieuhfiwhoeihufiodsuhcinouiawuhfoiwheoi
+----------my_printf--------------
+Test Regular Character: a
+Test Regular Character: z
+Test Regular Character Capital: L
+Test Regular Character Capital: M
+----------printf--------------
+Test Regular Character: a
+Test Regular Character: z
+Test Regular Character Capital: L
+Test Regular Character Capital: M
+----------both comparison printing up numbers up to 100--------------
+my_printf:  0 printf: 0
+my_printf:  1 printf: 1
+my_printf:  2 printf: 2
+my_printf:  3 printf: 3
+my_printf:  4 printf: 4
+my_printf:  5 printf: 5
+my_printf:  6 printf: 6
+my_printf:  7 printf: 7
+my_printf:  8 printf: 8
+my_printf:  9 printf: 9
+my_printf:  10 printf: 10
+my_printf:  11 printf: 11
+my_printf:  12 printf: 12
+my_printf:  13 printf: 13
+my_printf:  14 printf: 14
+my_printf:  15 printf: 15
+my_printf:  16 printf: 16
+my_printf:  17 printf: 17
+my_printf:  18 printf: 18
+my_printf:  19 printf: 19
+my_printf:  20 printf: 20
+my_printf:  21 printf: 21
+my_printf:  22 printf: 22
+my_printf:  23 printf: 23
+my_printf:  24 printf: 24
+my_printf:  25 printf: 25
+my_printf:  26 printf: 26
+my_printf:  27 printf: 27
+my_printf:  28 printf: 28
+my_printf:  29 printf: 29
+my_printf:  30 printf: 30
+my_printf:  31 printf: 31
+my_printf:  32 printf: 32
+my_printf:  33 printf: 33
+my_printf:  34 printf: 34
+my_printf:  35 printf: 35
+my_printf:  36 printf: 36
+my_printf:  37 printf: 37
+my_printf:  38 printf: 38
+my_printf:  39 printf: 39
+my_printf:  40 printf: 40
+my_printf:  41 printf: 41
+my_printf:  42 printf: 42
+my_printf:  43 printf: 43
+my_printf:  44 printf: 44
+my_printf:  45 printf: 45
+my_printf:  46 printf: 46
+my_printf:  47 printf: 47
+my_printf:  48 printf: 48
+my_printf:  49 printf: 49
+my_printf:  50 printf: 50
+my_printf:  51 printf: 51
+my_printf:  52 printf: 52
+my_printf:  53 printf: 53
+my_printf:  54 printf: 54
+my_printf:  55 printf: 55
+my_printf:  56 printf: 56
+my_printf:  57 printf: 57
+my_printf:  58 printf: 58
+my_printf:  59 printf: 59
+my_printf:  60 printf: 60
+my_printf:  61 printf: 61
+my_printf:  62 printf: 62
+my_printf:  63 printf: 63
+my_printf:  64 printf: 64
+my_printf:  65 printf: 65
+my_printf:  66 printf: 66
+my_printf:  67 printf: 67
+my_printf:  68 printf: 68
+my_printf:  69 printf: 69
+my_printf:  70 printf: 70
+my_printf:  71 printf: 71
+my_printf:  72 printf: 72
+my_printf:  73 printf: 73
+my_printf:  74 printf: 74
+my_printf:  75 printf: 75
+my_printf:  76 printf: 76
+my_printf:  77 printf: 77
+my_printf:  78 printf: 78
+my_printf:  79 printf: 79
+my_printf:  80 printf: 80
+my_printf:  81 printf: 81
+my_printf:  82 printf: 82
+my_printf:  83 printf: 83
+my_printf:  84 printf: 84
+my_printf:  85 printf: 85
+my_printf:  86 printf: 86
+my_printf:  87 printf: 87
+my_printf:  88 printf: 88
+my_printf:  89 printf: 89
+my_printf:  90 printf: 90
+my_printf:  91 printf: 91
+my_printf:  92 printf: 92
+my_printf:  93 printf: 93
+my_printf:  94 printf: 94
+my_printf:  95 printf: 95
+my_printf:  96 printf: 96
+my_printf:  97 printf: 97
+my_printf:  98 printf: 98
+my_printf:  99 printf: 99
+my_printf:  100 printf: 100
+-------------Negative numbers test--------------
+my_printf: -10
+printf: -10
+----------both comparison, lower case hex up to 100--------------
+my_printf: 0 printf: 0
+my_printf: 1 printf: 1
+my_printf: 2 printf: 2
+my_printf: 3 printf: 3
+my_printf: 4 printf: 4
+my_printf: 5 printf: 5
+my_printf: 6 printf: 6
+my_printf: 7 printf: 7
+my_printf: 8 printf: 8
+my_printf: 9 printf: 9
+my_printf: a printf: a
+my_printf: b printf: b
+my_printf: c printf: c
+my_printf: d printf: d
+my_printf: e printf: e
+my_printf: f printf: f
+my_printf: 10 printf: 10
+my_printf: 11 printf: 11
+my_printf: 12 printf: 12
+my_printf: 13 printf: 13
+my_printf: 14 printf: 14
+my_printf: 15 printf: 15
+my_printf: 16 printf: 16
+my_printf: 17 printf: 17
+my_printf: 18 printf: 18
+my_printf: 19 printf: 19
+my_printf: 1a printf: 1a
+my_printf: 1b printf: 1b
+my_printf: 1c printf: 1c
+my_printf: 1d printf: 1d
+my_printf: 1e printf: 1e
+my_printf: 1f printf: 1f
+my_printf: 20 printf: 20
+my_printf: 21 printf: 21
+my_printf: 22 printf: 22
+my_printf: 23 printf: 23
+my_printf: 24 printf: 24
+my_printf: 25 printf: 25
+my_printf: 26 printf: 26
+my_printf: 27 printf: 27
+my_printf: 28 printf: 28
+my_printf: 29 printf: 29
+my_printf: 2a printf: 2a
+my_printf: 2b printf: 2b
+my_printf: 2c printf: 2c
+my_printf: 2d printf: 2d
+my_printf: 2e printf: 2e
+my_printf: 2f printf: 2f
+my_printf: 30 printf: 30
+my_printf: 31 printf: 31
+my_printf: 32 printf: 32
+my_printf: 33 printf: 33
+my_printf: 34 printf: 34
+my_printf: 35 printf: 35
+my_printf: 36 printf: 36
+my_printf: 37 printf: 37
+my_printf: 38 printf: 38
+my_printf: 39 printf: 39
+my_printf: 3a printf: 3a
+my_printf: 3b printf: 3b
+my_printf: 3c printf: 3c
+my_printf: 3d printf: 3d
+my_printf: 3e printf: 3e
+my_printf: 3f printf: 3f
+my_printf: 40 printf: 40
+my_printf: 41 printf: 41
+my_printf: 42 printf: 42
+my_printf: 43 printf: 43
+my_printf: 44 printf: 44
+my_printf: 45 printf: 45
+my_printf: 46 printf: 46
+my_printf: 47 printf: 47
+my_printf: 48 printf: 48
+my_printf: 49 printf: 49
+my_printf: 4a printf: 4a
+my_printf: 4b printf: 4b
+my_printf: 4c printf: 4c
+my_printf: 4d printf: 4d
+my_printf: 4e printf: 4e
+my_printf: 4f printf: 4f
+my_printf: 50 printf: 50
+my_printf: 51 printf: 51
+my_printf: 52 printf: 52
+my_printf: 53 printf: 53
+my_printf: 54 printf: 54
+my_printf: 55 printf: 55
+my_printf: 56 printf: 56
+my_printf: 57 printf: 57
+my_printf: 58 printf: 58
+my_printf: 59 printf: 59
+my_printf: 5a printf: 5a
+my_printf: 5b printf: 5b
+my_printf: 5c printf: 5c
+my_printf: 5d printf: 5d
+my_printf: 5e printf: 5e
+my_printf: 5f printf: 5f
+my_printf: 60 printf: 60
+my_printf: 61 printf: 61
+my_printf: 62 printf: 62
+my_printf: 63 printf: 63
+my_printf: 64 printf: 64
+my_printf: 65 printf: 65
+my_printf: 66 printf: 66
+my_printf: 67 printf: 67
+my_printf: 68 printf: 68
+my_printf: 69 printf: 69
+my_printf: 6a printf: 6a
+my_printf: 6b printf: 6b
+my_printf: 6c printf: 6c
+my_printf: 6d printf: 6d
+my_printf: 6e printf: 6e
+my_printf: 6f printf: 6f
+my_printf: 70 printf: 70
+my_printf: 71 printf: 71
+my_printf: 72 printf: 72
+my_printf: 73 printf: 73
+my_printf: 74 printf: 74
+my_printf: 75 printf: 75
+my_printf: 76 printf: 76
+my_printf: 77 printf: 77
+my_printf: 78 printf: 78
+my_printf: 79 printf: 79
+my_printf: 7a printf: 7a
+my_printf: 7b printf: 7b
+my_printf: 7c printf: 7c
+my_printf: 7d printf: 7d
+my_printf: 7e printf: 7e
+my_printf: 7f printf: 7f
+my_printf: 80 printf: 80
+my_printf: 81 printf: 81
+my_printf: 82 printf: 82
+my_printf: 83 printf: 83
+my_printf: 84 printf: 84
+my_printf: 85 printf: 85
+my_printf: 86 printf: 86
+my_printf: 87 printf: 87
+my_printf: 88 printf: 88
+my_printf: 89 printf: 89
+my_printf: 8a printf: 8a
+my_printf: 8b printf: 8b
+my_printf: 8c printf: 8c
+my_printf: 8d printf: 8d
+my_printf: 8e printf: 8e
+my_printf: 8f printf: 8f
+my_printf: 90 printf: 90
+my_printf: 91 printf: 91
+my_printf: 92 printf: 92
+my_printf: 93 printf: 93
+my_printf: 94 printf: 94
+my_printf: 95 printf: 95
+my_printf: 96 printf: 96
+my_printf: 97 printf: 97
+my_printf: 98 printf: 98
+my_printf: 99 printf: 99
+my_printf: 9a printf: 9a
+my_printf: 9b printf: 9b
+my_printf: 9c printf: 9c
+my_printf: 9d printf: 9d
+my_printf: 9e printf: 9e
+my_printf: 9f printf: 9f
+my_printf: a0 printf: a0
+my_printf: a1 printf: a1
+my_printf: a2 printf: a2
+my_printf: a3 printf: a3
+my_printf: a4 printf: a4
+my_printf: a5 printf: a5
+my_printf: a6 printf: a6
+my_printf: a7 printf: a7
+my_printf: a8 printf: a8
+my_printf: a9 printf: a9
+my_printf: aa printf: aa
+my_printf: ab printf: ab
+my_printf: ac printf: ac
+my_printf: ad printf: ad
+my_printf: ae printf: ae
+my_printf: af printf: af
+my_printf: b0 printf: b0
+my_printf: b1 printf: b1
+my_printf: b2 printf: b2
+my_printf: b3 printf: b3
+my_printf: b4 printf: b4
+my_printf: b5 printf: b5
+my_printf: b6 printf: b6
+my_printf: b7 printf: b7
+my_printf: b8 printf: b8
+my_printf: b9 printf: b9
+my_printf: ba printf: ba
+my_printf: bb printf: bb
+my_printf: bc printf: bc
+my_printf: bd printf: bd
+my_printf: be printf: be
+my_printf: bf printf: bf
+my_printf: c0 printf: c0
+my_printf: c1 printf: c1
+my_printf: c2 printf: c2
+my_printf: c3 printf: c3
+my_printf: c4 printf: c4
+my_printf: c5 printf: c5
+my_printf: c6 printf: c6
+my_printf: c7 printf: c7
+my_printf: c8 printf: c8
+my_printf: c9 printf: c9
+my_printf: ca printf: ca
+my_printf: cb printf: cb
+my_printf: cc printf: cc
+my_printf: cd printf: cd
+my_printf: ce printf: ce
+my_printf: cf printf: cf
+my_printf: d0 printf: d0
+my_printf: d1 printf: d1
+my_printf: d2 printf: d2
+my_printf: d3 printf: d3
+my_printf: d4 printf: d4
+my_printf: d5 printf: d5
+my_printf: d6 printf: d6
+my_printf: d7 printf: d7
+my_printf: d8 printf: d8
+my_printf: d9 printf: d9
+my_printf: da printf: da
+my_printf: db printf: db
+my_printf: dc printf: dc
+my_printf: dd printf: dd
+my_printf: de printf: de
+my_printf: df printf: df
+my_printf: e0 printf: e0
+my_printf: e1 printf: e1
+my_printf: e2 printf: e2
+my_printf: e3 printf: e3
+my_printf: e4 printf: e4
+my_printf: e5 printf: e5
+my_printf: e6 printf: e6
+my_printf: e7 printf: e7
+my_printf: e8 printf: e8
+my_printf: e9 printf: e9
+my_printf: ea printf: ea
+my_printf: eb printf: eb
+my_printf: ec printf: ec
+my_printf: ed printf: ed
+my_printf: ee printf: ee
+my_printf: ef printf: ef
+my_printf: f0 printf: f0
+my_printf: f1 printf: f1
+my_printf: f2 printf: f2
+my_printf: f3 printf: f3
+my_printf: f4 printf: f4
+my_printf: f5 printf: f5
+my_printf: f6 printf: f6
+my_printf: f7 printf: f7
+my_printf: f8 printf: f8
+my_printf: f9 printf: f9
+my_printf: fa printf: fa
+my_printf: fb printf: fb
+my_printf: fc printf: fc
+my_printf: fd printf: fd
+my_printf: fe printf: fe
+my_printf: ff printf: ff
+my_printf: 100 printf: 100
+my_printf: 101 printf: 101
+my_printf: 102 printf: 102
+my_printf: 103 printf: 103
+my_printf: 104 printf: 104
+my_printf: 105 printf: 105
+my_printf: 106 printf: 106
+my_printf: 107 printf: 107
+my_printf: 108 printf: 108
+my_printf: 109 printf: 109
+my_printf: 10a printf: 10a
+my_printf: 10b printf: 10b
+my_printf: 10c printf: 10c
+my_printf: 10d printf: 10d
+my_printf: 10e printf: 10e
+my_printf: 10f printf: 10f
+my_printf: 110 printf: 110
+my_printf: 111 printf: 111
+my_printf: 112 printf: 112
+my_printf: 113 printf: 113
+my_printf: 114 printf: 114
+my_printf: 115 printf: 115
+my_printf: 116 printf: 116
+my_printf: 117 printf: 117
+my_printf: 118 printf: 118
+my_printf: 119 printf: 119
+my_printf: 11a printf: 11a
+my_printf: 11b printf: 11b
+my_printf: 11c printf: 11c
+my_printf: 11d printf: 11d
+my_printf: 11e printf: 11e
+my_printf: 11f printf: 11f
+my_printf: 120 printf: 120
+my_printf: 121 printf: 121
+my_printf: 122 printf: 122
+my_printf: 123 printf: 123
+my_printf: 124 printf: 124
+my_printf: 125 printf: 125
+my_printf: 126 printf: 126
+my_printf: 127 printf: 127
+my_printf: 128 printf: 128
+my_printf: 129 printf: 129
+my_printf: 12a printf: 12a
+my_printf: 12b printf: 12b
+my_printf: 12c printf: 12c
+my_printf: 12d printf: 12d
+my_printf: 12e printf: 12e
+my_printf: 12f printf: 12f
+my_printf: 130 printf: 130
+my_printf: 131 printf: 131
+my_printf: 132 printf: 132
+my_printf: 133 printf: 133
+my_printf: 134 printf: 134
+my_printf: 135 printf: 135
+my_printf: 136 printf: 136
+my_printf: 137 printf: 137
+my_printf: 138 printf: 138
+my_printf: 139 printf: 139
+my_printf: 13a printf: 13a
+my_printf: 13b printf: 13b
+my_printf: 13c printf: 13c
+my_printf: 13d printf: 13d
+my_printf: 13e printf: 13e
+my_printf: 13f printf: 13f
+my_printf: 140 printf: 140
+my_printf: 141 printf: 141
+my_printf: 142 printf: 142
+my_printf: 143 printf: 143
+my_printf: 144 printf: 144
+my_printf: 145 printf: 145
+my_printf: 146 printf: 146
+my_printf: 147 printf: 147
+my_printf: 148 printf: 148
+my_printf: 149 printf: 149
+my_printf: 14a printf: 14a
+my_printf: 14b printf: 14b
+my_printf: 14c printf: 14c
+my_printf: 14d printf: 14d
+my_printf: 14e printf: 14e
+my_printf: 14f printf: 14f
+my_printf: 150 printf: 150
+my_printf: 151 printf: 151
+my_printf: 152 printf: 152
+my_printf: 153 printf: 153
+my_printf: 154 printf: 154
+my_printf: 155 printf: 155
+my_printf: 156 printf: 156
+my_printf: 157 printf: 157
+my_printf: 158 printf: 158
+my_printf: 159 printf: 159
+my_printf: 15a printf: 15a
+my_printf: 15b printf: 15b
+my_printf: 15c printf: 15c
+my_printf: 15d printf: 15d
+my_printf: 15e printf: 15e
+my_printf: 15f printf: 15f
+my_printf: 160 printf: 160
+my_printf: 161 printf: 161
+my_printf: 162 printf: 162
+my_printf: 163 printf: 163
+my_printf: 164 printf: 164
+my_printf: 165 printf: 165
+my_printf: 166 printf: 166
+my_printf: 167 printf: 167
+my_printf: 168 printf: 168
+my_printf: 169 printf: 169
+my_printf: 16a printf: 16a
+my_printf: 16b printf: 16b
+my_printf: 16c printf: 16c
+my_printf: 16d printf: 16d
+my_printf: 16e printf: 16e
+my_printf: 16f printf: 16f
+my_printf: 170 printf: 170
+my_printf: 171 printf: 171
+my_printf: 172 printf: 172
+my_printf: 173 printf: 173
+my_printf: 174 printf: 174
+my_printf: 175 printf: 175
+my_printf: 176 printf: 176
+my_printf: 177 printf: 177
+my_printf: 178 printf: 178
+my_printf: 179 printf: 179
+my_printf: 17a printf: 17a
+my_printf: 17b printf: 17b
+my_printf: 17c printf: 17c
+my_printf: 17d printf: 17d
+my_printf: 17e printf: 17e
+my_printf: 17f printf: 17f
+my_printf: 180 printf: 180
+my_printf: 181 printf: 181
+my_printf: 182 printf: 182
+my_printf: 183 printf: 183
+my_printf: 184 printf: 184
+my_printf: 185 printf: 185
+my_printf: 186 printf: 186
+my_printf: 187 printf: 187
+my_printf: 188 printf: 188
+my_printf: 189 printf: 189
+my_printf: 18a printf: 18a
+my_printf: 18b printf: 18b
+my_printf: 18c printf: 18c
+my_printf: 18d printf: 18d
+my_printf: 18e printf: 18e
+my_printf: 18f printf: 18f
+my_printf: 190 printf: 190
+my_printf: 191 printf: 191
+my_printf: 192 printf: 192
+my_printf: 193 printf: 193
+my_printf: 194 printf: 194
+my_printf: 195 printf: 195
+my_printf: 196 printf: 196
+my_printf: 197 printf: 197
+my_printf: 198 printf: 198
+my_printf: 199 printf: 199
+my_printf: 19a printf: 19a
+my_printf: 19b printf: 19b
+my_printf: 19c printf: 19c
+my_printf: 19d printf: 19d
+my_printf: 19e printf: 19e
+my_printf: 19f printf: 19f
+my_printf: 1a0 printf: 1a0
+my_printf: 1a1 printf: 1a1
+my_printf: 1a2 printf: 1a2
+my_printf: 1a3 printf: 1a3
+my_printf: 1a4 printf: 1a4
+my_printf: 1a5 printf: 1a5
+my_printf: 1a6 printf: 1a6
+my_printf: 1a7 printf: 1a7
+my_printf: 1a8 printf: 1a8
+my_printf: 1a9 printf: 1a9
+my_printf: 1aa printf: 1aa
+my_printf: 1ab printf: 1ab
+my_printf: 1ac printf: 1ac
+my_printf: 1ad printf: 1ad
+my_printf: 1ae printf: 1ae
+my_printf: 1af printf: 1af
+my_printf: 1b0 printf: 1b0
+my_printf: 1b1 printf: 1b1
+my_printf: 1b2 printf: 1b2
+my_printf: 1b3 printf: 1b3
+my_printf: 1b4 printf: 1b4
+my_printf: 1b5 printf: 1b5
+my_printf: 1b6 printf: 1b6
+my_printf: 1b7 printf: 1b7
+my_printf: 1b8 printf: 1b8
+my_printf: 1b9 printf: 1b9
+my_printf: 1ba printf: 1ba
+my_printf: 1bb printf: 1bb
+my_printf: 1bc printf: 1bc
+my_printf: 1bd printf: 1bd
+my_printf: 1be printf: 1be
+my_printf: 1bf printf: 1bf
+my_printf: 1c0 printf: 1c0
+my_printf: 1c1 printf: 1c1
+my_printf: 1c2 printf: 1c2
+my_printf: 1c3 printf: 1c3
+my_printf: 1c4 printf: 1c4
+my_printf: 1c5 printf: 1c5
+my_printf: 1c6 printf: 1c6
+my_printf: 1c7 printf: 1c7
+my_printf: 1c8 printf: 1c8
+my_printf: 1c9 printf: 1c9
+my_printf: 1ca printf: 1ca
+my_printf: 1cb printf: 1cb
+my_printf: 1cc printf: 1cc
+my_printf: 1cd printf: 1cd
+my_printf: 1ce printf: 1ce
+my_printf: 1cf printf: 1cf
+my_printf: 1d0 printf: 1d0
+my_printf: 1d1 printf: 1d1
+my_printf: 1d2 printf: 1d2
+my_printf: 1d3 printf: 1d3
+my_printf: 1d4 printf: 1d4
+my_printf: 1d5 printf: 1d5
+my_printf: 1d6 printf: 1d6
+my_printf: 1d7 printf: 1d7
+my_printf: 1d8 printf: 1d8
+my_printf: 1d9 printf: 1d9
+my_printf: 1da printf: 1da
+my_printf: 1db printf: 1db
+my_printf: 1dc printf: 1dc
+my_printf: 1dd printf: 1dd
+my_printf: 1de printf: 1de
+my_printf: 1df printf: 1df
+my_printf: 1e0 printf: 1e0
+my_printf: 1e1 printf: 1e1
+my_printf: 1e2 printf: 1e2
+my_printf: 1e3 printf: 1e3
+my_printf: 1e4 printf: 1e4
+my_printf: 1e5 printf: 1e5
+my_printf: 1e6 printf: 1e6
+my_printf: 1e7 printf: 1e7
+my_printf: 1e8 printf: 1e8
+my_printf: 1e9 printf: 1e9
+my_printf: 1ea printf: 1ea
+my_printf: 1eb printf: 1eb
+my_printf: 1ec printf: 1ec
+my_printf: 1ed printf: 1ed
+my_printf: 1ee printf: 1ee
+my_printf: 1ef printf: 1ef
+my_printf: 1f0 printf: 1f0
+my_printf: 1f1 printf: 1f1
+my_printf: 1f2 printf: 1f2
+my_printf: 1f3 printf: 1f3
+my_printf: 1f4 printf: 1f4
+my_printf: 1f5 printf: 1f5
+my_printf: 1f6 printf: 1f6
+my_printf: 1f7 printf: 1f7
+my_printf: 1f8 printf: 1f8
+my_printf: 1f9 printf: 1f9
+my_printf: 1fa printf: 1fa
+my_printf: 1fb printf: 1fb
+my_printf: 1fc printf: 1fc
+my_printf: 1fd printf: 1fd
+my_printf: 1fe printf: 1fe
+my_printf: 1ff printf: 1ff
+my_printf: 200 printf: 200
+my_printf: 201 printf: 201
+my_printf: 202 printf: 202
+my_printf: 203 printf: 203
+my_printf: 204 printf: 204
+my_printf: 205 printf: 205
+my_printf: 206 printf: 206
+my_printf: 207 printf: 207
+my_printf: 208 printf: 208
+my_printf: 209 printf: 209
+my_printf: 20a printf: 20a
+my_printf: 20b printf: 20b
+my_printf: 20c printf: 20c
+my_printf: 20d printf: 20d
+my_printf: 20e printf: 20e
+my_printf: 20f printf: 20f
+my_printf: 210 printf: 210
+my_printf: 211 printf: 211
+my_printf: 212 printf: 212
+my_printf: 213 printf: 213
+my_printf: 214 printf: 214
+my_printf: 215 printf: 215
+my_printf: 216 printf: 216
+my_printf: 217 printf: 217
+my_printf: 218 printf: 218
+my_printf: 219 printf: 219
+my_printf: 21a printf: 21a
+my_printf: 21b printf: 21b
+my_printf: 21c printf: 21c
+my_printf: 21d printf: 21d
+my_printf: 21e printf: 21e
+my_printf: 21f printf: 21f
+my_printf: 220 printf: 220
+my_printf: 221 printf: 221
+my_printf: 222 printf: 222
+my_printf: 223 printf: 223
+my_printf: 224 printf: 224
+my_printf: 225 printf: 225
+my_printf: 226 printf: 226
+my_printf: 227 printf: 227
+my_printf: 228 printf: 228
+my_printf: 229 printf: 229
+my_printf: 22a printf: 22a
+my_printf: 22b printf: 22b
+my_printf: 22c printf: 22c
+my_printf: 22d printf: 22d
+my_printf: 22e printf: 22e
+my_printf: 22f printf: 22f
+my_printf: 230 printf: 230
+my_printf: 231 printf: 231
+my_printf: 232 printf: 232
+my_printf: 233 printf: 233
+my_printf: 234 printf: 234
+my_printf: 235 printf: 235
+my_printf: 236 printf: 236
+my_printf: 237 printf: 237
+my_printf: 238 printf: 238
+my_printf: 239 printf: 239
+my_printf: 23a printf: 23a
+my_printf: 23b printf: 23b
+my_printf: 23c printf: 23c
+my_printf: 23d printf: 23d
+my_printf: 23e printf: 23e
+my_printf: 23f printf: 23f
+my_printf: 240 printf: 240
+my_printf: 241 printf: 241
+my_printf: 242 printf: 242
+my_printf: 243 printf: 243
+my_printf: 244 printf: 244
+my_printf: 245 printf: 245
+my_printf: 246 printf: 246
+my_printf: 247 printf: 247
+my_printf: 248 printf: 248
+my_printf: 249 printf: 249
+my_printf: 24a printf: 24a
+my_printf: 24b printf: 24b
+my_printf: 24c printf: 24c
+my_printf: 24d printf: 24d
+my_printf: 24e printf: 24e
+my_printf: 24f printf: 24f
+my_printf: 250 printf: 250
+my_printf: 251 printf: 251
+my_printf: 252 printf: 252
+my_printf: 253 printf: 253
+my_printf: 254 printf: 254
+my_printf: 255 printf: 255
+my_printf: 256 printf: 256
+my_printf: 257 printf: 257
+my_printf: 258 printf: 258
+my_printf: 259 printf: 259
+my_printf: 25a printf: 25a
+my_printf: 25b printf: 25b
+my_printf: 25c printf: 25c
+my_printf: 25d printf: 25d
+my_printf: 25e printf: 25e
+my_printf: 25f printf: 25f
+my_printf: 260 printf: 260
+my_printf: 261 printf: 261
+my_printf: 262 printf: 262
+my_printf: 263 printf: 263
+my_printf: 264 printf: 264
+my_printf: 265 printf: 265
+my_printf: 266 printf: 266
+my_printf: 267 printf: 267
+my_printf: 268 printf: 268
+my_printf: 269 printf: 269
+my_printf: 26a printf: 26a
+my_printf: 26b printf: 26b
+my_printf: 26c printf: 26c
+my_printf: 26d printf: 26d
+my_printf: 26e printf: 26e
+my_printf: 26f printf: 26f
+my_printf: 270 printf: 270
+my_printf: 271 printf: 271
+my_printf: 272 printf: 272
+my_printf: 273 printf: 273
+my_printf: 274 printf: 274
+my_printf: 275 printf: 275
+my_printf: 276 printf: 276
+my_printf: 277 printf: 277
+my_printf: 278 printf: 278
+my_printf: 279 printf: 279
+my_printf: 27a printf: 27a
+my_printf: 27b printf: 27b
+my_printf: 27c printf: 27c
+my_printf: 27d printf: 27d
+my_printf: 27e printf: 27e
+my_printf: 27f printf: 27f
+my_printf: 280 printf: 280
+my_printf: 281 printf: 281
+my_printf: 282 printf: 282
+my_printf: 283 printf: 283
+my_printf: 284 printf: 284
+my_printf: 285 printf: 285
+my_printf: 286 printf: 286
+my_printf: 287 printf: 287
+my_printf: 288 printf: 288
+my_printf: 289 printf: 289
+my_printf: 28a printf: 28a
+my_printf: 28b printf: 28b
+my_printf: 28c printf: 28c
+my_printf: 28d printf: 28d
+my_printf: 28e printf: 28e
+my_printf: 28f printf: 28f
+my_printf: 290 printf: 290
+my_printf: 291 printf: 291
+my_printf: 292 printf: 292
+my_printf: 293 printf: 293
+my_printf: 294 printf: 294
+my_printf: 295 printf: 295
+my_printf: 296 printf: 296
+my_printf: 297 printf: 297
+my_printf: 298 printf: 298
+my_printf: 299 printf: 299
+my_printf: 29a printf: 29a
+my_printf: 29b printf: 29b
+my_printf: 29c printf: 29c
+my_printf: 29d printf: 29d
+my_printf: 29e printf: 29e
+my_printf: 29f printf: 29f
+my_printf: 2a0 printf: 2a0
+my_printf: 2a1 printf: 2a1
+my_printf: 2a2 printf: 2a2
+my_printf: 2a3 printf: 2a3
+my_printf: 2a4 printf: 2a4
+my_printf: 2a5 printf: 2a5
+my_printf: 2a6 printf: 2a6
+my_printf: 2a7 printf: 2a7
+my_printf: 2a8 printf: 2a8
+my_printf: 2a9 printf: 2a9
+my_printf: 2aa printf: 2aa
+my_printf: 2ab printf: 2ab
+my_printf: 2ac printf: 2ac
+my_printf: 2ad printf: 2ad
+my_printf: 2ae printf: 2ae
+my_printf: 2af printf: 2af
+my_printf: 2b0 printf: 2b0
+my_printf: 2b1 printf: 2b1
+my_printf: 2b2 printf: 2b2
+my_printf: 2b3 printf: 2b3
+my_printf: 2b4 printf: 2b4
+my_printf: 2b5 printf: 2b5
+my_printf: 2b6 printf: 2b6
+my_printf: 2b7 printf: 2b7
+my_printf: 2b8 printf: 2b8
+my_printf: 2b9 printf: 2b9
+my_printf: 2ba printf: 2ba
+my_printf: 2bb printf: 2bb
+my_printf: 2bc printf: 2bc
+my_printf: 2bd printf: 2bd
+my_printf: 2be printf: 2be
+my_printf: 2bf printf: 2bf
+my_printf: 2c0 printf: 2c0
+my_printf: 2c1 printf: 2c1
+my_printf: 2c2 printf: 2c2
+my_printf: 2c3 printf: 2c3
+my_printf: 2c4 printf: 2c4
+my_printf: 2c5 printf: 2c5
+my_printf: 2c6 printf: 2c6
+my_printf: 2c7 printf: 2c7
+my_printf: 2c8 printf: 2c8
+my_printf: 2c9 printf: 2c9
+my_printf: 2ca printf: 2ca
+my_printf: 2cb printf: 2cb
+my_printf: 2cc printf: 2cc
+my_printf: 2cd printf: 2cd
+my_printf: 2ce printf: 2ce
+my_printf: 2cf printf: 2cf
+my_printf: 2d0 printf: 2d0
+my_printf: 2d1 printf: 2d1
+my_printf: 2d2 printf: 2d2
+my_printf: 2d3 printf: 2d3
+my_printf: 2d4 printf: 2d4
+my_printf: 2d5 printf: 2d5
+my_printf: 2d6 printf: 2d6
+my_printf: 2d7 printf: 2d7
+my_printf: 2d8 printf: 2d8
+my_printf: 2d9 printf: 2d9
+my_printf: 2da printf: 2da
+my_printf: 2db printf: 2db
+my_printf: 2dc printf: 2dc
+my_printf: 2dd printf: 2dd
+my_printf: 2de printf: 2de
+my_printf: 2df printf: 2df
+my_printf: 2e0 printf: 2e0
+my_printf: 2e1 printf: 2e1
+my_printf: 2e2 printf: 2e2
+my_printf: 2e3 printf: 2e3
+my_printf: 2e4 printf: 2e4
+my_printf: 2e5 printf: 2e5
+my_printf: 2e6 printf: 2e6
+my_printf: 2e7 printf: 2e7
+my_printf: 2e8 printf: 2e8
+my_printf: 2e9 printf: 2e9
+my_printf: 2ea printf: 2ea
+my_printf: 2eb printf: 2eb
+my_printf: 2ec printf: 2ec
+my_printf: 2ed printf: 2ed
+my_printf: 2ee printf: 2ee
+my_printf: 2ef printf: 2ef
+my_printf: 2f0 printf: 2f0
+my_printf: 2f1 printf: 2f1
+my_printf: 2f2 printf: 2f2
+my_printf: 2f3 printf: 2f3
+my_printf: 2f4 printf: 2f4
+my_printf: 2f5 printf: 2f5
+my_printf: 2f6 printf: 2f6
+my_printf: 2f7 printf: 2f7
+my_printf: 2f8 printf: 2f8
+my_printf: 2f9 printf: 2f9
+my_printf: 2fa printf: 2fa
+my_printf: 2fb printf: 2fb
+my_printf: 2fc printf: 2fc
+my_printf: 2fd printf: 2fd
+my_printf: 2fe printf: 2fe
+my_printf: 2ff printf: 2ff
+my_printf: 300 printf: 300
+my_printf: 301 printf: 301
+my_printf: 302 printf: 302
+my_printf: 303 printf: 303
+my_printf: 304 printf: 304
+my_printf: 305 printf: 305
+my_printf: 306 printf: 306
+my_printf: 307 printf: 307
+my_printf: 308 printf: 308
+my_printf: 309 printf: 309
+my_printf: 30a printf: 30a
+my_printf: 30b printf: 30b
+my_printf: 30c printf: 30c
+my_printf: 30d printf: 30d
+my_printf: 30e printf: 30e
+my_printf: 30f printf: 30f
+my_printf: 310 printf: 310
+my_printf: 311 printf: 311
+my_printf: 312 printf: 312
+my_printf: 313 printf: 313
+my_printf: 314 printf: 314
+my_printf: 315 printf: 315
+my_printf: 316 printf: 316
+my_printf: 317 printf: 317
+my_printf: 318 printf: 318
+my_printf: 319 printf: 319
+my_printf: 31a printf: 31a
+my_printf: 31b printf: 31b
+my_printf: 31c printf: 31c
+my_printf: 31d printf: 31d
+my_printf: 31e printf: 31e
+my_printf: 31f printf: 31f
+my_printf: 320 printf: 320
+my_printf: 321 printf: 321
+my_printf: 322 printf: 322
+my_printf: 323 printf: 323
+my_printf: 324 printf: 324
+my_printf: 325 printf: 325
+my_printf: 326 printf: 326
+my_printf: 327 printf: 327
+my_printf: 328 printf: 328
+my_printf: 329 printf: 329
+my_printf: 32a printf: 32a
+my_printf: 32b printf: 32b
+my_printf: 32c printf: 32c
+my_printf: 32d printf: 32d
+my_printf: 32e printf: 32e
+my_printf: 32f printf: 32f
+my_printf: 330 printf: 330
+my_printf: 331 printf: 331
+my_printf: 332 printf: 332
+my_printf: 333 printf: 333
+my_printf: 334 printf: 334
+my_printf: 335 printf: 335
+my_printf: 336 printf: 336
+my_printf: 337 printf: 337
+my_printf: 338 printf: 338
+my_printf: 339 printf: 339
+my_printf: 33a printf: 33a
+my_printf: 33b printf: 33b
+my_printf: 33c printf: 33c
+my_printf: 33d printf: 33d
+my_printf: 33e printf: 33e
+my_printf: 33f printf: 33f
+my_printf: 340 printf: 340
+my_printf: 341 printf: 341
+my_printf: 342 printf: 342
+my_printf: 343 printf: 343
+my_printf: 344 printf: 344
+my_printf: 345 printf: 345
+my_printf: 346 printf: 346
+my_printf: 347 printf: 347
+my_printf: 348 printf: 348
+my_printf: 349 printf: 349
+my_printf: 34a printf: 34a
+my_printf: 34b printf: 34b
+my_printf: 34c printf: 34c
+my_printf: 34d printf: 34d
+my_printf: 34e printf: 34e
+my_printf: 34f printf: 34f
+my_printf: 350 printf: 350
+my_printf: 351 printf: 351
+my_printf: 352 printf: 352
+my_printf: 353 printf: 353
+my_printf: 354 printf: 354
+my_printf: 355 printf: 355
+my_printf: 356 printf: 356
+my_printf: 357 printf: 357
+my_printf: 358 printf: 358
+my_printf: 359 printf: 359
+my_printf: 35a printf: 35a
+my_printf: 35b printf: 35b
+my_printf: 35c printf: 35c
+my_printf: 35d printf: 35d
+my_printf: 35e printf: 35e
+my_printf: 35f printf: 35f
+my_printf: 360 printf: 360
+my_printf: 361 printf: 361
+my_printf: 362 printf: 362
+my_printf: 363 printf: 363
+my_printf: 364 printf: 364
+my_printf: 365 printf: 365
+my_printf: 366 printf: 366
+my_printf: 367 printf: 367
+my_printf: 368 printf: 368
+my_printf: 369 printf: 369
+my_printf: 36a printf: 36a
+my_printf: 36b printf: 36b
+my_printf: 36c printf: 36c
+my_printf: 36d printf: 36d
+my_printf: 36e printf: 36e
+my_printf: 36f printf: 36f
+my_printf: 370 printf: 370
+my_printf: 371 printf: 371
+my_printf: 372 printf: 372
+my_printf: 373 printf: 373
+my_printf: 374 printf: 374
+my_printf: 375 printf: 375
+my_printf: 376 printf: 376
+my_printf: 377 printf: 377
+my_printf: 378 printf: 378
+my_printf: 379 printf: 379
+my_printf: 37a printf: 37a
+my_printf: 37b printf: 37b
+my_printf: 37c printf: 37c
+my_printf: 37d printf: 37d
+my_printf: 37e printf: 37e
+my_printf: 37f printf: 37f
+my_printf: 380 printf: 380
+my_printf: 381 printf: 381
+my_printf: 382 printf: 382
+my_printf: 383 printf: 383
+my_printf: 384 printf: 384
+my_printf: 385 printf: 385
+my_printf: 386 printf: 386
+my_printf: 387 printf: 387
+my_printf: 388 printf: 388
+my_printf: 389 printf: 389
+my_printf: 38a printf: 38a
+my_printf: 38b printf: 38b
+my_printf: 38c printf: 38c
+my_printf: 38d printf: 38d
+my_printf: 38e printf: 38e
+my_printf: 38f printf: 38f
+my_printf: 390 printf: 390
+my_printf: 391 printf: 391
+my_printf: 392 printf: 392
+my_printf: 393 printf: 393
+my_printf: 394 printf: 394
+my_printf: 395 printf: 395
+my_printf: 396 printf: 396
+my_printf: 397 printf: 397
+my_printf: 398 printf: 398
+my_printf: 399 printf: 399
+my_printf: 39a printf: 39a
+my_printf: 39b printf: 39b
+my_printf: 39c printf: 39c
+my_printf: 39d printf: 39d
+my_printf: 39e printf: 39e
+my_printf: 39f printf: 39f
+my_printf: 3a0 printf: 3a0
+my_printf: 3a1 printf: 3a1
+my_printf: 3a2 printf: 3a2
+my_printf: 3a3 printf: 3a3
+my_printf: 3a4 printf: 3a4
+my_printf: 3a5 printf: 3a5
+my_printf: 3a6 printf: 3a6
+my_printf: 3a7 printf: 3a7
+my_printf: 3a8 printf: 3a8
+my_printf: 3a9 printf: 3a9
+my_printf: 3aa printf: 3aa
+my_printf: 3ab printf: 3ab
+my_printf: 3ac printf: 3ac
+my_printf: 3ad printf: 3ad
+my_printf: 3ae printf: 3ae
+my_printf: 3af printf: 3af
+my_printf: 3b0 printf: 3b0
+my_printf: 3b1 printf: 3b1
+my_printf: 3b2 printf: 3b2
+my_printf: 3b3 printf: 3b3
+my_printf: 3b4 printf: 3b4
+my_printf: 3b5 printf: 3b5
+my_printf: 3b6 printf: 3b6
+my_printf: 3b7 printf: 3b7
+my_printf: 3b8 printf: 3b8
+my_printf: 3b9 printf: 3b9
+my_printf: 3ba printf: 3ba
+my_printf: 3bb printf: 3bb
+my_printf: 3bc printf: 3bc
+my_printf: 3bd printf: 3bd
+my_printf: 3be printf: 3be
+my_printf: 3bf printf: 3bf
+my_printf: 3c0 printf: 3c0
+my_printf: 3c1 printf: 3c1
+my_printf: 3c2 printf: 3c2
+my_printf: 3c3 printf: 3c3
+my_printf: 3c4 printf: 3c4
+my_printf: 3c5 printf: 3c5
+my_printf: 3c6 printf: 3c6
+my_printf: 3c7 printf: 3c7
+my_printf: 3c8 printf: 3c8
+my_printf: 3c9 printf: 3c9
+my_printf: 3ca printf: 3ca
+my_printf: 3cb printf: 3cb
+my_printf: 3cc printf: 3cc
+my_printf: 3cd printf: 3cd
+my_printf: 3ce printf: 3ce
+my_printf: 3cf printf: 3cf
+my_printf: 3d0 printf: 3d0
+my_printf: 3d1 printf: 3d1
+my_printf: 3d2 printf: 3d2
+my_printf: 3d3 printf: 3d3
+my_printf: 3d4 printf: 3d4
+my_printf: 3d5 printf: 3d5
+my_printf: 3d6 printf: 3d6
+my_printf: 3d7 printf: 3d7
+my_printf: 3d8 printf: 3d8
+my_printf: 3d9 printf: 3d9
+my_printf: 3da printf: 3da
+my_printf: 3db printf: 3db
+my_printf: 3dc printf: 3dc
+my_printf: 3dd printf: 3dd
+my_printf: 3de printf: 3de
+my_printf: 3df printf: 3df
+my_printf: 3e0 printf: 3e0
+my_printf: 3e1 printf: 3e1
+my_printf: 3e2 printf: 3e2
+my_printf: 3e3 printf: 3e3
+my_printf: 3e4 printf: 3e4
+my_printf: 3e5 printf: 3e5
+my_printf: 3e6 printf: 3e6
+my_printf: 3e7 printf: 3e7
+my_printf: 3e8 printf: 3e8
+----------both comparison, upper case hex up to 100--------------
+my_printf: 0 printf: 0
+my_printf: 1 printf: 1
+my_printf: 2 printf: 2
+my_printf: 3 printf: 3
+my_printf: 4 printf: 4
+my_printf: 5 printf: 5
+my_printf: 6 printf: 6
+my_printf: 7 printf: 7
+my_printf: 8 printf: 8
+my_printf: 9 printf: 9
+my_printf: A printf: A
+my_printf: B printf: B
+my_printf: C printf: C
+my_printf: D printf: D
+my_printf: E printf: E
+my_printf: F printf: F
+my_printf: 10 printf: 10
+my_printf: 11 printf: 11
+my_printf: 12 printf: 12
+my_printf: 13 printf: 13
+my_printf: 14 printf: 14
+my_printf: 15 printf: 15
+my_printf: 16 printf: 16
+my_printf: 17 printf: 17
+my_printf: 18 printf: 18
+my_printf: 19 printf: 19
+my_printf: 1A printf: 1A
+my_printf: 1B printf: 1B
+my_printf: 1C printf: 1C
+my_printf: 1D printf: 1D
+my_printf: 1E printf: 1E
+my_printf: 1F printf: 1F
+my_printf: 20 printf: 20
+my_printf: 21 printf: 21
+my_printf: 22 printf: 22
+my_printf: 23 printf: 23
+my_printf: 24 printf: 24
+my_printf: 25 printf: 25
+my_printf: 26 printf: 26
+my_printf: 27 printf: 27
+my_printf: 28 printf: 28
+my_printf: 29 printf: 29
+my_printf: 2A printf: 2A
+my_printf: 2B printf: 2B
+my_printf: 2C printf: 2C
+my_printf: 2D printf: 2D
+my_printf: 2E printf: 2E
+my_printf: 2F printf: 2F
+my_printf: 30 printf: 30
+my_printf: 31 printf: 31
+my_printf: 32 printf: 32
+my_printf: 33 printf: 33
+my_printf: 34 printf: 34
+my_printf: 35 printf: 35
+my_printf: 36 printf: 36
+my_printf: 37 printf: 37
+my_printf: 38 printf: 38
+my_printf: 39 printf: 39
+my_printf: 3A printf: 3A
+my_printf: 3B printf: 3B
+my_printf: 3C printf: 3C
+my_printf: 3D printf: 3D
+my_printf: 3E printf: 3E
+my_printf: 3F printf: 3F
+my_printf: 40 printf: 40
+my_printf: 41 printf: 41
+my_printf: 42 printf: 42
+my_printf: 43 printf: 43
+my_printf: 44 printf: 44
+my_printf: 45 printf: 45
+my_printf: 46 printf: 46
+my_printf: 47 printf: 47
+my_printf: 48 printf: 48
+my_printf: 49 printf: 49
+my_printf: 4A printf: 4A
+my_printf: 4B printf: 4B
+my_printf: 4C printf: 4C
+my_printf: 4D printf: 4D
+my_printf: 4E printf: 4E
+my_printf: 4F printf: 4F
+my_printf: 50 printf: 50
+my_printf: 51 printf: 51
+my_printf: 52 printf: 52
+my_printf: 53 printf: 53
+my_printf: 54 printf: 54
+my_printf: 55 printf: 55
+my_printf: 56 printf: 56
+my_printf: 57 printf: 57
+my_printf: 58 printf: 58
+my_printf: 59 printf: 59
+my_printf: 5A printf: 5A
+my_printf: 5B printf: 5B
+my_printf: 5C printf: 5C
+my_printf: 5D printf: 5D
+my_printf: 5E printf: 5E
+my_printf: 5F printf: 5F
+my_printf: 60 printf: 60
+my_printf: 61 printf: 61
+my_printf: 62 printf: 62
+my_printf: 63 printf: 63
+my_printf: 64 printf: 64
+my_printf: 65 printf: 65
+my_printf: 66 printf: 66
+my_printf: 67 printf: 67
+my_printf: 68 printf: 68
+my_printf: 69 printf: 69
+my_printf: 6A printf: 6A
+my_printf: 6B printf: 6B
+my_printf: 6C printf: 6C
+my_printf: 6D printf: 6D
+my_printf: 6E printf: 6E
+my_printf: 6F printf: 6F
+my_printf: 70 printf: 70
+my_printf: 71 printf: 71
+my_printf: 72 printf: 72
+my_printf: 73 printf: 73
+my_printf: 74 printf: 74
+my_printf: 75 printf: 75
+my_printf: 76 printf: 76
+my_printf: 77 printf: 77
+my_printf: 78 printf: 78
+my_printf: 79 printf: 79
+my_printf: 7A printf: 7A
+my_printf: 7B printf: 7B
+my_printf: 7C printf: 7C
+my_printf: 7D printf: 7D
+my_printf: 7E printf: 7E
+my_printf: 7F printf: 7F
+my_printf: 80 printf: 80
+my_printf: 81 printf: 81
+my_printf: 82 printf: 82
+my_printf: 83 printf: 83
+my_printf: 84 printf: 84
+my_printf: 85 printf: 85
+my_printf: 86 printf: 86
+my_printf: 87 printf: 87
+my_printf: 88 printf: 88
+my_printf: 89 printf: 89
+my_printf: 8A printf: 8A
+my_printf: 8B printf: 8B
+my_printf: 8C printf: 8C
+my_printf: 8D printf: 8D
+my_printf: 8E printf: 8E
+my_printf: 8F printf: 8F
+my_printf: 90 printf: 90
+my_printf: 91 printf: 91
+my_printf: 92 printf: 92
+my_printf: 93 printf: 93
+my_printf: 94 printf: 94
+my_printf: 95 printf: 95
+my_printf: 96 printf: 96
+my_printf: 97 printf: 97
+my_printf: 98 printf: 98
+my_printf: 99 printf: 99
+my_printf: 9A printf: 9A
+my_printf: 9B printf: 9B
+my_printf: 9C printf: 9C
+my_printf: 9D printf: 9D
+my_printf: 9E printf: 9E
+my_printf: 9F printf: 9F
+my_printf: A0 printf: A0
+my_printf: A1 printf: A1
+my_printf: A2 printf: A2
+my_printf: A3 printf: A3
+my_printf: A4 printf: A4
+my_printf: A5 printf: A5
+my_printf: A6 printf: A6
+my_printf: A7 printf: A7
+my_printf: A8 printf: A8
+my_printf: A9 printf: A9
+my_printf: AA printf: AA
+my_printf: AB printf: AB
+my_printf: AC printf: AC
+my_printf: AD printf: AD
+my_printf: AE printf: AE
+my_printf: AF printf: AF
+my_printf: B0 printf: B0
+my_printf: B1 printf: B1
+my_printf: B2 printf: B2
+my_printf: B3 printf: B3
+my_printf: B4 printf: B4
+my_printf: B5 printf: B5
+my_printf: B6 printf: B6
+my_printf: B7 printf: B7
+my_printf: B8 printf: B8
+my_printf: B9 printf: B9
+my_printf: BA printf: BA
+my_printf: BB printf: BB
+my_printf: BC printf: BC
+my_printf: BD printf: BD
+my_printf: BE printf: BE
+my_printf: BF printf: BF
+my_printf: C0 printf: C0
+my_printf: C1 printf: C1
+my_printf: C2 printf: C2
+my_printf: C3 printf: C3
+my_printf: C4 printf: C4
+my_printf: C5 printf: C5
+my_printf: C6 printf: C6
+my_printf: C7 printf: C7
+my_printf: C8 printf: C8
+my_printf: C9 printf: C9
+my_printf: CA printf: CA
+my_printf: CB printf: CB
+my_printf: CC printf: CC
+my_printf: CD printf: CD
+my_printf: CE printf: CE
+my_printf: CF printf: CF
+my_printf: D0 printf: D0
+my_printf: D1 printf: D1
+my_printf: D2 printf: D2
+my_printf: D3 printf: D3
+my_printf: D4 printf: D4
+my_printf: D5 printf: D5
+my_printf: D6 printf: D6
+my_printf: D7 printf: D7
+my_printf: D8 printf: D8
+my_printf: D9 printf: D9
+my_printf: DA printf: DA
+my_printf: DB printf: DB
+my_printf: DC printf: DC
+my_printf: DD printf: DD
+my_printf: DE printf: DE
+my_printf: DF printf: DF
+my_printf: E0 printf: E0
+my_printf: E1 printf: E1
+my_printf: E2 printf: E2
+my_printf: E3 printf: E3
+my_printf: E4 printf: E4
+my_printf: E5 printf: E5
+my_printf: E6 printf: E6
+my_printf: E7 printf: E7
+my_printf: E8 printf: E8
+my_printf: E9 printf: E9
+my_printf: EA printf: EA
+my_printf: EB printf: EB
+my_printf: EC printf: EC
+my_printf: ED printf: ED
+my_printf: EE printf: EE
+my_printf: EF printf: EF
+my_printf: F0 printf: F0
+my_printf: F1 printf: F1
+my_printf: F2 printf: F2
+my_printf: F3 printf: F3
+my_printf: F4 printf: F4
+my_printf: F5 printf: F5
+my_printf: F6 printf: F6
+my_printf: F7 printf: F7
+my_printf: F8 printf: F8
+my_printf: F9 printf: F9
+my_printf: FA printf: FA
+my_printf: FB printf: FB
+my_printf: FC printf: FC
+my_printf: FD printf: FD
+my_printf: FE printf: FE
+my_printf: FF printf: FF
+my_printf: 100 printf: 100
+my_printf: 101 printf: 101
+my_printf: 102 printf: 102
+my_printf: 103 printf: 103
+my_printf: 104 printf: 104
+my_printf: 105 printf: 105
+my_printf: 106 printf: 106
+my_printf: 107 printf: 107
+my_printf: 108 printf: 108
+my_printf: 109 printf: 109
+my_printf: 10A printf: 10A
+my_printf: 10B printf: 10B
+my_printf: 10C printf: 10C
+my_printf: 10D printf: 10D
+my_printf: 10E printf: 10E
+my_printf: 10F printf: 10F
+my_printf: 110 printf: 110
+my_printf: 111 printf: 111
+my_printf: 112 printf: 112
+my_printf: 113 printf: 113
+my_printf: 114 printf: 114
+my_printf: 115 printf: 115
+my_printf: 116 printf: 116
+my_printf: 117 printf: 117
+my_printf: 118 printf: 118
+my_printf: 119 printf: 119
+my_printf: 11A printf: 11A
+my_printf: 11B printf: 11B
+my_printf: 11C printf: 11C
+my_printf: 11D printf: 11D
+my_printf: 11E printf: 11E
+my_printf: 11F printf: 11F
+my_printf: 120 printf: 120
+my_printf: 121 printf: 121
+my_printf: 122 printf: 122
+my_printf: 123 printf: 123
+my_printf: 124 printf: 124
+my_printf: 125 printf: 125
+my_printf: 126 printf: 126
+my_printf: 127 printf: 127
+my_printf: 128 printf: 128
+my_printf: 129 printf: 129
+my_printf: 12A printf: 12A
+my_printf: 12B printf: 12B
+my_printf: 12C printf: 12C
+my_printf: 12D printf: 12D
+my_printf: 12E printf: 12E
+my_printf: 12F printf: 12F
+my_printf: 130 printf: 130
+my_printf: 131 printf: 131
+my_printf: 132 printf: 132
+my_printf: 133 printf: 133
+my_printf: 134 printf: 134
+my_printf: 135 printf: 135
+my_printf: 136 printf: 136
+my_printf: 137 printf: 137
+my_printf: 138 printf: 138
+my_printf: 139 printf: 139
+my_printf: 13A printf: 13A
+my_printf: 13B printf: 13B
+my_printf: 13C printf: 13C
+my_printf: 13D printf: 13D
+my_printf: 13E printf: 13E
+my_printf: 13F printf: 13F
+my_printf: 140 printf: 140
+my_printf: 141 printf: 141
+my_printf: 142 printf: 142
+my_printf: 143 printf: 143
+my_printf: 144 printf: 144
+my_printf: 145 printf: 145
+my_printf: 146 printf: 146
+my_printf: 147 printf: 147
+my_printf: 148 printf: 148
+my_printf: 149 printf: 149
+my_printf: 14A printf: 14A
+my_printf: 14B printf: 14B
+my_printf: 14C printf: 14C
+my_printf: 14D printf: 14D
+my_printf: 14E printf: 14E
+my_printf: 14F printf: 14F
+my_printf: 150 printf: 150
+my_printf: 151 printf: 151
+my_printf: 152 printf: 152
+my_printf: 153 printf: 153
+my_printf: 154 printf: 154
+my_printf: 155 printf: 155
+my_printf: 156 printf: 156
+my_printf: 157 printf: 157
+my_printf: 158 printf: 158
+my_printf: 159 printf: 159
+my_printf: 15A printf: 15A
+my_printf: 15B printf: 15B
+my_printf: 15C printf: 15C
+my_printf: 15D printf: 15D
+my_printf: 15E printf: 15E
+my_printf: 15F printf: 15F
+my_printf: 160 printf: 160
+my_printf: 161 printf: 161
+my_printf: 162 printf: 162
+my_printf: 163 printf: 163
+my_printf: 164 printf: 164
+my_printf: 165 printf: 165
+my_printf: 166 printf: 166
+my_printf: 167 printf: 167
+my_printf: 168 printf: 168
+my_printf: 169 printf: 169
+my_printf: 16A printf: 16A
+my_printf: 16B printf: 16B
+my_printf: 16C printf: 16C
+my_printf: 16D printf: 16D
+my_printf: 16E printf: 16E
+my_printf: 16F printf: 16F
+my_printf: 170 printf: 170
+my_printf: 171 printf: 171
+my_printf: 172 printf: 172
+my_printf: 173 printf: 173
+my_printf: 174 printf: 174
+my_printf: 175 printf: 175
+my_printf: 176 printf: 176
+my_printf: 177 printf: 177
+my_printf: 178 printf: 178
+my_printf: 179 printf: 179
+my_printf: 17A printf: 17A
+my_printf: 17B printf: 17B
+my_printf: 17C printf: 17C
+my_printf: 17D printf: 17D
+my_printf: 17E printf: 17E
+my_printf: 17F printf: 17F
+my_printf: 180 printf: 180
+my_printf: 181 printf: 181
+my_printf: 182 printf: 182
+my_printf: 183 printf: 183
+my_printf: 184 printf: 184
+my_printf: 185 printf: 185
+my_printf: 186 printf: 186
+my_printf: 187 printf: 187
+my_printf: 188 printf: 188
+my_printf: 189 printf: 189
+my_printf: 18A printf: 18A
+my_printf: 18B printf: 18B
+my_printf: 18C printf: 18C
+my_printf: 18D printf: 18D
+my_printf: 18E printf: 18E
+my_printf: 18F printf: 18F
+my_printf: 190 printf: 190
+my_printf: 191 printf: 191
+my_printf: 192 printf: 192
+my_printf: 193 printf: 193
+my_printf: 194 printf: 194
+my_printf: 195 printf: 195
+my_printf: 196 printf: 196
+my_printf: 197 printf: 197
+my_printf: 198 printf: 198
+my_printf: 199 printf: 199
+my_printf: 19A printf: 19A
+my_printf: 19B printf: 19B
+my_printf: 19C printf: 19C
+my_printf: 19D printf: 19D
+my_printf: 19E printf: 19E
+my_printf: 19F printf: 19F
+my_printf: 1A0 printf: 1A0
+my_printf: 1A1 printf: 1A1
+my_printf: 1A2 printf: 1A2
+my_printf: 1A3 printf: 1A3
+my_printf: 1A4 printf: 1A4
+my_printf: 1A5 printf: 1A5
+my_printf: 1A6 printf: 1A6
+my_printf: 1A7 printf: 1A7
+my_printf: 1A8 printf: 1A8
+my_printf: 1A9 printf: 1A9
+my_printf: 1AA printf: 1AA
+my_printf: 1AB printf: 1AB
+my_printf: 1AC printf: 1AC
+my_printf: 1AD printf: 1AD
+my_printf: 1AE printf: 1AE
+my_printf: 1AF printf: 1AF
+my_printf: 1B0 printf: 1B0
+my_printf: 1B1 printf: 1B1
+my_printf: 1B2 printf: 1B2
+my_printf: 1B3 printf: 1B3
+my_printf: 1B4 printf: 1B4
+my_printf: 1B5 printf: 1B5
+my_printf: 1B6 printf: 1B6
+my_printf: 1B7 printf: 1B7
+my_printf: 1B8 printf: 1B8
+my_printf: 1B9 printf: 1B9
+my_printf: 1BA printf: 1BA
+my_printf: 1BB printf: 1BB
+my_printf: 1BC printf: 1BC
+my_printf: 1BD printf: 1BD
+my_printf: 1BE printf: 1BE
+my_printf: 1BF printf: 1BF
+my_printf: 1C0 printf: 1C0
+my_printf: 1C1 printf: 1C1
+my_printf: 1C2 printf: 1C2
+my_printf: 1C3 printf: 1C3
+my_printf: 1C4 printf: 1C4
+my_printf: 1C5 printf: 1C5
+my_printf: 1C6 printf: 1C6
+my_printf: 1C7 printf: 1C7
+my_printf: 1C8 printf: 1C8
+my_printf: 1C9 printf: 1C9
+my_printf: 1CA printf: 1CA
+my_printf: 1CB printf: 1CB
+my_printf: 1CC printf: 1CC
+my_printf: 1CD printf: 1CD
+my_printf: 1CE printf: 1CE
+my_printf: 1CF printf: 1CF
+my_printf: 1D0 printf: 1D0
+my_printf: 1D1 printf: 1D1
+my_printf: 1D2 printf: 1D2
+my_printf: 1D3 printf: 1D3
+my_printf: 1D4 printf: 1D4
+my_printf: 1D5 printf: 1D5
+my_printf: 1D6 printf: 1D6
+my_printf: 1D7 printf: 1D7
+my_printf: 1D8 printf: 1D8
+my_printf: 1D9 printf: 1D9
+my_printf: 1DA printf: 1DA
+my_printf: 1DB printf: 1DB
+my_printf: 1DC printf: 1DC
+my_printf: 1DD printf: 1DD
+my_printf: 1DE printf: 1DE
+my_printf: 1DF printf: 1DF
+my_printf: 1E0 printf: 1E0
+my_printf: 1E1 printf: 1E1
+my_printf: 1E2 printf: 1E2
+my_printf: 1E3 printf: 1E3
+my_printf: 1E4 printf: 1E4
+my_printf: 1E5 printf: 1E5
+my_printf: 1E6 printf: 1E6
+my_printf: 1E7 printf: 1E7
+my_printf: 1E8 printf: 1E8
+my_printf: 1E9 printf: 1E9
+my_printf: 1EA printf: 1EA
+my_printf: 1EB printf: 1EB
+my_printf: 1EC printf: 1EC
+my_printf: 1ED printf: 1ED
+my_printf: 1EE printf: 1EE
+my_printf: 1EF printf: 1EF
+my_printf: 1F0 printf: 1F0
+my_printf: 1F1 printf: 1F1
+my_printf: 1F2 printf: 1F2
+my_printf: 1F3 printf: 1F3
+my_printf: 1F4 printf: 1F4
+my_printf: 1F5 printf: 1F5
+my_printf: 1F6 printf: 1F6
+my_printf: 1F7 printf: 1F7
+my_printf: 1F8 printf: 1F8
+my_printf: 1F9 printf: 1F9
+my_printf: 1FA printf: 1FA
+my_printf: 1FB printf: 1FB
+my_printf: 1FC printf: 1FC
+my_printf: 1FD printf: 1FD
+my_printf: 1FE printf: 1FE
+my_printf: 1FF printf: 1FF
+my_printf: 200 printf: 200
+my_printf: 201 printf: 201
+my_printf: 202 printf: 202
+my_printf: 203 printf: 203
+my_printf: 204 printf: 204
+my_printf: 205 printf: 205
+my_printf: 206 printf: 206
+my_printf: 207 printf: 207
+my_printf: 208 printf: 208
+my_printf: 209 printf: 209
+my_printf: 20A printf: 20A
+my_printf: 20B printf: 20B
+my_printf: 20C printf: 20C
+my_printf: 20D printf: 20D
+my_printf: 20E printf: 20E
+my_printf: 20F printf: 20F
+my_printf: 210 printf: 210
+my_printf: 211 printf: 211
+my_printf: 212 printf: 212
+my_printf: 213 printf: 213
+my_printf: 214 printf: 214
+my_printf: 215 printf: 215
+my_printf: 216 printf: 216
+my_printf: 217 printf: 217
+my_printf: 218 printf: 218
+my_printf: 219 printf: 219
+my_printf: 21A printf: 21A
+my_printf: 21B printf: 21B
+my_printf: 21C printf: 21C
+my_printf: 21D printf: 21D
+my_printf: 21E printf: 21E
+my_printf: 21F printf: 21F
+my_printf: 220 printf: 220
+my_printf: 221 printf: 221
+my_printf: 222 printf: 222
+my_printf: 223 printf: 223
+my_printf: 224 printf: 224
+my_printf: 225 printf: 225
+my_printf: 226 printf: 226
+my_printf: 227 printf: 227
+my_printf: 228 printf: 228
+my_printf: 229 printf: 229
+my_printf: 22A printf: 22A
+my_printf: 22B printf: 22B
+my_printf: 22C printf: 22C
+my_printf: 22D printf: 22D
+my_printf: 22E printf: 22E
+my_printf: 22F printf: 22F
+my_printf: 230 printf: 230
+my_printf: 231 printf: 231
+my_printf: 232 printf: 232
+my_printf: 233 printf: 233
+my_printf: 234 printf: 234
+my_printf: 235 printf: 235
+my_printf: 236 printf: 236
+my_printf: 237 printf: 237
+my_printf: 238 printf: 238
+my_printf: 239 printf: 239
+my_printf: 23A printf: 23A
+my_printf: 23B printf: 23B
+my_printf: 23C printf: 23C
+my_printf: 23D printf: 23D
+my_printf: 23E printf: 23E
+my_printf: 23F printf: 23F
+my_printf: 240 printf: 240
+my_printf: 241 printf: 241
+my_printf: 242 printf: 242
+my_printf: 243 printf: 243
+my_printf: 244 printf: 244
+my_printf: 245 printf: 245
+my_printf: 246 printf: 246
+my_printf: 247 printf: 247
+my_printf: 248 printf: 248
+my_printf: 249 printf: 249
+my_printf: 24A printf: 24A
+my_printf: 24B printf: 24B
+my_printf: 24C printf: 24C
+my_printf: 24D printf: 24D
+my_printf: 24E printf: 24E
+my_printf: 24F printf: 24F
+my_printf: 250 printf: 250
+my_printf: 251 printf: 251
+my_printf: 252 printf: 252
+my_printf: 253 printf: 253
+my_printf: 254 printf: 254
+my_printf: 255 printf: 255
+my_printf: 256 printf: 256
+my_printf: 257 printf: 257
+my_printf: 258 printf: 258
+my_printf: 259 printf: 259
+my_printf: 25A printf: 25A
+my_printf: 25B printf: 25B
+my_printf: 25C printf: 25C
+my_printf: 25D printf: 25D
+my_printf: 25E printf: 25E
+my_printf: 25F printf: 25F
+my_printf: 260 printf: 260
+my_printf: 261 printf: 261
+my_printf: 262 printf: 262
+my_printf: 263 printf: 263
+my_printf: 264 printf: 264
+my_printf: 265 printf: 265
+my_printf: 266 printf: 266
+my_printf: 267 printf: 267
+my_printf: 268 printf: 268
+my_printf: 269 printf: 269
+my_printf: 26A printf: 26A
+my_printf: 26B printf: 26B
+my_printf: 26C printf: 26C
+my_printf: 26D printf: 26D
+my_printf: 26E printf: 26E
+my_printf: 26F printf: 26F
+my_printf: 270 printf: 270
+my_printf: 271 printf: 271
+my_printf: 272 printf: 272
+my_printf: 273 printf: 273
+my_printf: 274 printf: 274
+my_printf: 275 printf: 275
+my_printf: 276 printf: 276
+my_printf: 277 printf: 277
+my_printf: 278 printf: 278
+my_printf: 279 printf: 279
+my_printf: 27A printf: 27A
+my_printf: 27B printf: 27B
+my_printf: 27C printf: 27C
+my_printf: 27D printf: 27D
+my_printf: 27E printf: 27E
+my_printf: 27F printf: 27F
+my_printf: 280 printf: 280
+my_printf: 281 printf: 281
+my_printf: 282 printf: 282
+my_printf: 283 printf: 283
+my_printf: 284 printf: 284
+my_printf: 285 printf: 285
+my_printf: 286 printf: 286
+my_printf: 287 printf: 287
+my_printf: 288 printf: 288
+my_printf: 289 printf: 289
+my_printf: 28A printf: 28A
+my_printf: 28B printf: 28B
+my_printf: 28C printf: 28C
+my_printf: 28D printf: 28D
+my_printf: 28E printf: 28E
+my_printf: 28F printf: 28F
+my_printf: 290 printf: 290
+my_printf: 291 printf: 291
+my_printf: 292 printf: 292
+my_printf: 293 printf: 293
+my_printf: 294 printf: 294
+my_printf: 295 printf: 295
+my_printf: 296 printf: 296
+my_printf: 297 printf: 297
+my_printf: 298 printf: 298
+my_printf: 299 printf: 299
+my_printf: 29A printf: 29A
+my_printf: 29B printf: 29B
+my_printf: 29C printf: 29C
+my_printf: 29D printf: 29D
+my_printf: 29E printf: 29E
+my_printf: 29F printf: 29F
+my_printf: 2A0 printf: 2A0
+my_printf: 2A1 printf: 2A1
+my_printf: 2A2 printf: 2A2
+my_printf: 2A3 printf: 2A3
+my_printf: 2A4 printf: 2A4
+my_printf: 2A5 printf: 2A5
+my_printf: 2A6 printf: 2A6
+my_printf: 2A7 printf: 2A7
+my_printf: 2A8 printf: 2A8
+my_printf: 2A9 printf: 2A9
+my_printf: 2AA printf: 2AA
+my_printf: 2AB printf: 2AB
+my_printf: 2AC printf: 2AC
+my_printf: 2AD printf: 2AD
+my_printf: 2AE printf: 2AE
+my_printf: 2AF printf: 2AF
+my_printf: 2B0 printf: 2B0
+my_printf: 2B1 printf: 2B1
+my_printf: 2B2 printf: 2B2
+my_printf: 2B3 printf: 2B3
+my_printf: 2B4 printf: 2B4
+my_printf: 2B5 printf: 2B5
+my_printf: 2B6 printf: 2B6
+my_printf: 2B7 printf: 2B7
+my_printf: 2B8 printf: 2B8
+my_printf: 2B9 printf: 2B9
+my_printf: 2BA printf: 2BA
+my_printf: 2BB printf: 2BB
+my_printf: 2BC printf: 2BC
+my_printf: 2BD printf: 2BD
+my_printf: 2BE printf: 2BE
+my_printf: 2BF printf: 2BF
+my_printf: 2C0 printf: 2C0
+my_printf: 2C1 printf: 2C1
+my_printf: 2C2 printf: 2C2
+my_printf: 2C3 printf: 2C3
+my_printf: 2C4 printf: 2C4
+my_printf: 2C5 printf: 2C5
+my_printf: 2C6 printf: 2C6
+my_printf: 2C7 printf: 2C7
+my_printf: 2C8 printf: 2C8
+my_printf: 2C9 printf: 2C9
+my_printf: 2CA printf: 2CA
+my_printf: 2CB printf: 2CB
+my_printf: 2CC printf: 2CC
+my_printf: 2CD printf: 2CD
+my_printf: 2CE printf: 2CE
+my_printf: 2CF printf: 2CF
+my_printf: 2D0 printf: 2D0
+my_printf: 2D1 printf: 2D1
+my_printf: 2D2 printf: 2D2
+my_printf: 2D3 printf: 2D3
+my_printf: 2D4 printf: 2D4
+my_printf: 2D5 printf: 2D5
+my_printf: 2D6 printf: 2D6
+my_printf: 2D7 printf: 2D7
+my_printf: 2D8 printf: 2D8
+my_printf: 2D9 printf: 2D9
+my_printf: 2DA printf: 2DA
+my_printf: 2DB printf: 2DB
+my_printf: 2DC printf: 2DC
+my_printf: 2DD printf: 2DD
+my_printf: 2DE printf: 2DE
+my_printf: 2DF printf: 2DF
+my_printf: 2E0 printf: 2E0
+my_printf: 2E1 printf: 2E1
+my_printf: 2E2 printf: 2E2
+my_printf: 2E3 printf: 2E3
+my_printf: 2E4 printf: 2E4
+my_printf: 2E5 printf: 2E5
+my_printf: 2E6 printf: 2E6
+my_printf: 2E7 printf: 2E7
+my_printf: 2E8 printf: 2E8
+my_printf: 2E9 printf: 2E9
+my_printf: 2EA printf: 2EA
+my_printf: 2EB printf: 2EB
+my_printf: 2EC printf: 2EC
+my_printf: 2ED printf: 2ED
+my_printf: 2EE printf: 2EE
+my_printf: 2EF printf: 2EF
+my_printf: 2F0 printf: 2F0
+my_printf: 2F1 printf: 2F1
+my_printf: 2F2 printf: 2F2
+my_printf: 2F3 printf: 2F3
+my_printf: 2F4 printf: 2F4
+my_printf: 2F5 printf: 2F5
+my_printf: 2F6 printf: 2F6
+my_printf: 2F7 printf: 2F7
+my_printf: 2F8 printf: 2F8
+my_printf: 2F9 printf: 2F9
+my_printf: 2FA printf: 2FA
+my_printf: 2FB printf: 2FB
+my_printf: 2FC printf: 2FC
+my_printf: 2FD printf: 2FD
+my_printf: 2FE printf: 2FE
+my_printf: 2FF printf: 2FF
+my_printf: 300 printf: 300
+my_printf: 301 printf: 301
+my_printf: 302 printf: 302
+my_printf: 303 printf: 303
+my_printf: 304 printf: 304
+my_printf: 305 printf: 305
+my_printf: 306 printf: 306
+my_printf: 307 printf: 307
+my_printf: 308 printf: 308
+my_printf: 309 printf: 309
+my_printf: 30A printf: 30A
+my_printf: 30B printf: 30B
+my_printf: 30C printf: 30C
+my_printf: 30D printf: 30D
+my_printf: 30E printf: 30E
+my_printf: 30F printf: 30F
+my_printf: 310 printf: 310
+my_printf: 311 printf: 311
+my_printf: 312 printf: 312
+my_printf: 313 printf: 313
+my_printf: 314 printf: 314
+my_printf: 315 printf: 315
+my_printf: 316 printf: 316
+my_printf: 317 printf: 317
+my_printf: 318 printf: 318
+my_printf: 319 printf: 319
+my_printf: 31A printf: 31A
+my_printf: 31B printf: 31B
+my_printf: 31C printf: 31C
+my_printf: 31D printf: 31D
+my_printf: 31E printf: 31E
+my_printf: 31F printf: 31F
+my_printf: 320 printf: 320
+my_printf: 321 printf: 321
+my_printf: 322 printf: 322
+my_printf: 323 printf: 323
+my_printf: 324 printf: 324
+my_printf: 325 printf: 325
+my_printf: 326 printf: 326
+my_printf: 327 printf: 327
+my_printf: 328 printf: 328
+my_printf: 329 printf: 329
+my_printf: 32A printf: 32A
+my_printf: 32B printf: 32B
+my_printf: 32C printf: 32C
+my_printf: 32D printf: 32D
+my_printf: 32E printf: 32E
+my_printf: 32F printf: 32F
+my_printf: 330 printf: 330
+my_printf: 331 printf: 331
+my_printf: 332 printf: 332
+my_printf: 333 printf: 333
+my_printf: 334 printf: 334
+my_printf: 335 printf: 335
+my_printf: 336 printf: 336
+my_printf: 337 printf: 337
+my_printf: 338 printf: 338
+my_printf: 339 printf: 339
+my_printf: 33A printf: 33A
+my_printf: 33B printf: 33B
+my_printf: 33C printf: 33C
+my_printf: 33D printf: 33D
+my_printf: 33E printf: 33E
+my_printf: 33F printf: 33F
+my_printf: 340 printf: 340
+my_printf: 341 printf: 341
+my_printf: 342 printf: 342
+my_printf: 343 printf: 343
+my_printf: 344 printf: 344
+my_printf: 345 printf: 345
+my_printf: 346 printf: 346
+my_printf: 347 printf: 347
+my_printf: 348 printf: 348
+my_printf: 349 printf: 349
+my_printf: 34A printf: 34A
+my_printf: 34B printf: 34B
+my_printf: 34C printf: 34C
+my_printf: 34D printf: 34D
+my_printf: 34E printf: 34E
+my_printf: 34F printf: 34F
+my_printf: 350 printf: 350
+my_printf: 351 printf: 351
+my_printf: 352 printf: 352
+my_printf: 353 printf: 353
+my_printf: 354 printf: 354
+my_printf: 355 printf: 355
+my_printf: 356 printf: 356
+my_printf: 357 printf: 357
+my_printf: 358 printf: 358
+my_printf: 359 printf: 359
+my_printf: 35A printf: 35A
+my_printf: 35B printf: 35B
+my_printf: 35C printf: 35C
+my_printf: 35D printf: 35D
+my_printf: 35E printf: 35E
+my_printf: 35F printf: 35F
+my_printf: 360 printf: 360
+my_printf: 361 printf: 361
+my_printf: 362 printf: 362
+my_printf: 363 printf: 363
+my_printf: 364 printf: 364
+my_printf: 365 printf: 365
+my_printf: 366 printf: 366
+my_printf: 367 printf: 367
+my_printf: 368 printf: 368
+my_printf: 369 printf: 369
+my_printf: 36A printf: 36A
+my_printf: 36B printf: 36B
+my_printf: 36C printf: 36C
+my_printf: 36D printf: 36D
+my_printf: 36E printf: 36E
+my_printf: 36F printf: 36F
+my_printf: 370 printf: 370
+my_printf: 371 printf: 371
+my_printf: 372 printf: 372
+my_printf: 373 printf: 373
+my_printf: 374 printf: 374
+my_printf: 375 printf: 375
+my_printf: 376 printf: 376
+my_printf: 377 printf: 377
+my_printf: 378 printf: 378
+my_printf: 379 printf: 379
+my_printf: 37A printf: 37A
+my_printf: 37B printf: 37B
+my_printf: 37C printf: 37C
+my_printf: 37D printf: 37D
+my_printf: 37E printf: 37E
+my_printf: 37F printf: 37F
+my_printf: 380 printf: 380
+my_printf: 381 printf: 381
+my_printf: 382 printf: 382
+my_printf: 383 printf: 383
+my_printf: 384 printf: 384
+my_printf: 385 printf: 385
+my_printf: 386 printf: 386
+my_printf: 387 printf: 387
+my_printf: 388 printf: 388
+my_printf: 389 printf: 389
+my_printf: 38A printf: 38A
+my_printf: 38B printf: 38B
+my_printf: 38C printf: 38C
+my_printf: 38D printf: 38D
+my_printf: 38E printf: 38E
+my_printf: 38F printf: 38F
+my_printf: 390 printf: 390
+my_printf: 391 printf: 391
+my_printf: 392 printf: 392
+my_printf: 393 printf: 393
+my_printf: 394 printf: 394
+my_printf: 395 printf: 395
+my_printf: 396 printf: 396
+my_printf: 397 printf: 397
+my_printf: 398 printf: 398
+my_printf: 399 printf: 399
+my_printf: 39A printf: 39A
+my_printf: 39B printf: 39B
+my_printf: 39C printf: 39C
+my_printf: 39D printf: 39D
+my_printf: 39E printf: 39E
+my_printf: 39F printf: 39F
+my_printf: 3A0 printf: 3A0
+my_printf: 3A1 printf: 3A1
+my_printf: 3A2 printf: 3A2
+my_printf: 3A3 printf: 3A3
+my_printf: 3A4 printf: 3A4
+my_printf: 3A5 printf: 3A5
+my_printf: 3A6 printf: 3A6
+my_printf: 3A7 printf: 3A7
+my_printf: 3A8 printf: 3A8
+my_printf: 3A9 printf: 3A9
+my_printf: 3AA printf: 3AA
+my_printf: 3AB printf: 3AB
+my_printf: 3AC printf: 3AC
+my_printf: 3AD printf: 3AD
+my_printf: 3AE printf: 3AE
+my_printf: 3AF printf: 3AF
+my_printf: 3B0 printf: 3B0
+my_printf: 3B1 printf: 3B1
+my_printf: 3B2 printf: 3B2
+my_printf: 3B3 printf: 3B3
+my_printf: 3B4 printf: 3B4
+my_printf: 3B5 printf: 3B5
+my_printf: 3B6 printf: 3B6
+my_printf: 3B7 printf: 3B7
+my_printf: 3B8 printf: 3B8
+my_printf: 3B9 printf: 3B9
+my_printf: 3BA printf: 3BA
+my_printf: 3BB printf: 3BB
+my_printf: 3BC printf: 3BC
+my_printf: 3BD printf: 3BD
+my_printf: 3BE printf: 3BE
+my_printf: 3BF printf: 3BF
+my_printf: 3C0 printf: 3C0
+my_printf: 3C1 printf: 3C1
+my_printf: 3C2 printf: 3C2
+my_printf: 3C3 printf: 3C3
+my_printf: 3C4 printf: 3C4
+my_printf: 3C5 printf: 3C5
+my_printf: 3C6 printf: 3C6
+my_printf: 3C7 printf: 3C7
+my_printf: 3C8 printf: 3C8
+my_printf: 3C9 printf: 3C9
+my_printf: 3CA printf: 3CA
+my_printf: 3CB printf: 3CB
+my_printf: 3CC printf: 3CC
+my_printf: 3CD printf: 3CD
+my_printf: 3CE printf: 3CE
+my_printf: 3CF printf: 3CF
+my_printf: 3D0 printf: 3D0
+my_printf: 3D1 printf: 3D1
+my_printf: 3D2 printf: 3D2
+my_printf: 3D3 printf: 3D3
+my_printf: 3D4 printf: 3D4
+my_printf: 3D5 printf: 3D5
+my_printf: 3D6 printf: 3D6
+my_printf: 3D7 printf: 3D7
+my_printf: 3D8 printf: 3D8
+my_printf: 3D9 printf: 3D9
+my_printf: 3DA printf: 3DA
+my_printf: 3DB printf: 3DB
+my_printf: 3DC printf: 3DC
+my_printf: 3DD printf: 3DD
+my_printf: 3DE printf: 3DE
+my_printf: 3DF printf: 3DF
+my_printf: 3E0 printf: 3E0
+my_printf: 3E1 printf: 3E1
+my_printf: 3E2 printf: 3E2
+my_printf: 3E3 printf: 3E3
+my_printf: 3E4 printf: 3E4
+my_printf: 3E5 printf: 3E5
+my_printf: 3E6 printf: 3E6
+my_printf: 3E7 printf: 3E7
+my_printf: 3E8 printf: 3E8
+
+----------width tests integer--------------
+my_printf: 
+      1000
+printf: 
+      1000
+my_printf: 
+               10000
+printf:
+               10000
+
+----------width tests upper hex--------------
+my_printf: 
+       3E8
+printf: 
+       3E8
+my_printf: 
+                2710
+printf:
+                2710
+
+----------width tests lower hex--------------
+my_printf: 
+       3e8
+printf: 
+       3e8
+my_printf: 
+                2710
+printf:
+                2710
+----------width tests string and char--------------
+my_printf: 
+                    test width
+printf: 
+                    test width
+my_printf: 
+                   a
+printf:
+                   a
+
+----------width tests left align --------------
+my_printf: 
+1000      |
+printf: 
+1000      |
+my_printf: 
+test width                    |
+printf: 
+test width                    |
+my_printf: 
+2710                |
+printf:
+2710                |
+my_printf: 
+a                   |
+printf:
+a                   |
+----------percision tests--------------
+my_printf: 
+0000001000
+printf: 
+0000001000
+my_printf: 
+test width
+printf: 
+test width
+my_printf: 
+00000000000000002710
+printf:
+00000000000000002710
+---------- star test --------------
+my_printf:
+                   20
+printf:
+                   20
+my_printf:
+0000000010
+printf:
+0000000010
+my_printf:
+ Cut
+printf:
+ Cut
+---------- two percent test--------------
+my_printf: %d this test is meant to check if  %s and you are able to print a % sign
+printf: %d this test is meant to check if  %s and you are able to print a % sign
+----------percision tests less than--------------
+my_printf: 
+1000
+printf: 
+1000
+my_printf: 
+3e8
+printf: 
+3e8
+my_printf: 
+tes
+printf: 
+tes
+----------lots mixed together test--------------
+my_printf: 
+          1  2 0000000003 hi  1
+printf: 
+          1  2 0000000003 hi  1
+-----------width and plus sign test------------
+my_printf: 
+        +1
+printf: 
+        +1
+
+----------Zero Pad test--------------
+my_printf:
+01000
+printf:
+01000
+
+----------test negatives--------------
+my_printf:
+-30
+printf:
+-30
+my_printf:
+ffffffe2
+printf:
+ffffffe2
+my_printf:
+FFFFFFE2
+printf:
+FFFFFFE2
+
+----------test long and short types--------------
+my_printf:2147483646
+printf:2147483646
+my_printf: 2
+printf: 2
+--------------------return amount tests ----------------
+printf:
+hi my name is ariel      +1000
+31
+my_printf:
+hi my name is ariel      +1000
+31
+printf:
+Getting the percision and total chars 00000000000000000010
+59
+my_printf:
+Getting the percision and total chars 00000000000000000010
+59
+all types to know for sure that the count is correct: str, 00000000000000203, 63, 63,    a
+all types to know for sure that the count is correct: str, 00000000000000203, 63, 63,    a
+ my_printf: 91 printf: 91
+-----------------------more width and percision tests---------------
+
+ my_printf:
+ 63  63
+
+ printf:
+ 63  63
+all types to know for sure that the count is correct: str, 00000000000000203, 63, 63,    a
+all types to know for sure that the count is correct: str, 00000000000000203, 63, 63,    a
+
+-----------------------my creative addition, for loop tests---------------
+When i = 0, the int value is 0
+When i = 1, the int value is 5
+When i = 2, the int value is 10
+When i = 3, the int value is 15
+When i = 4, the int value is 20
+When i = 5, the int value is 25
+When i = 6, the int value is 30
+When i = 7, the int value is 35
+When i = 8, the int value is 40
+When i = 9, the int value is 45
+
+-----------------------my creative addition, binary tests---------------
+0
+1
+10
+11
+100
+101
+110
+111
+1000
+1001
+1010
+1011
+1100
+1101
+1110
+1111
+10000
+10001
+10010
+10011
+10100
+10101
+10110
+10111
+11000
+11001
+11010
+11011
+11100
+11101
+11110
+11111
+100000
+100001
+100010
+100011
+100100
+100101
+100110
+100111
+101000
+101001
+101010
+101011
+101100
+101101
+101110
+101111
+110000
+110001
+negatives
+0
+11111111111111111111111111111111
+11111111111111111111111111111110
+11111111111111111111111111111101
+11111111111111111111111111111100
+11111111111111111111111111111011
+11111111111111111111111111111010
+11111111111111111111111111111001
+11111111111111111111111111111000
+11111111111111111111111111110111
+11111111111111111111111111110110
+11111111111111111111111111110101
+11111111111111111111111111110100
+11111111111111111111111111110011
+11111111111111111111111111110010
+11111111111111111111111111110001
+11111111111111111111111111110000
+11111111111111111111111111101111
+11111111111111111111111111101110
+11111111111111111111111111101101
+11111111111111111111111111101100
+11111111111111111111111111101011
+11111111111111111111111111101010
+11111111111111111111111111101001
+11111111111111111111111111101000
+11111111111111111111111111100111
+11111111111111111111111111100110
+11111111111111111111111111100101
+11111111111111111111111111100100
+11111111111111111111111111100011
+11111111111111111111111111100010
+11111111111111111111111111100001
+11111111111111111111111111100000
+11111111111111111111111111011111
+11111111111111111111111111011110
+11111111111111111111111111011101
+11111111111111111111111111011100
+11111111111111111111111111011011
+11111111111111111111111111011010
+11111111111111111111111111011001
+11111111111111111111111111011000
+11111111111111111111111111010111
+11111111111111111111111111010110
+11111111111111111111111111010101
+11111111111111111111111111010100
+11111111111111111111111111010011
+11111111111111111111111111010010
+11111111111111111111111111010001
+11111111111111111111111111010000
+11111111111111111111111111001111
+
+-----------------------my creative addition, binary two's compliment---------------
+0
+-1
+-2
+-3
+-4
+-5
+-6
+-7
+-8
+-9
+-10
+-11
+-12
+-13
+-14
+-15
+-16
+-17
+-18
+-19
+-20
+-21
+-22
+-23
+-24
+-25
+-26
+-27
+-28
+-29
+-30
+-31
+-32
+-33
+-34
+-35
+-36
+-37
+-38
+-39
+-40
+-41
+-42
+-43
+-44
+-45
+-46
+-47
+-48
+-49
+
+ ----------------------space modifier test---------
+
+ 10
+ 10
+my 4, print 4
