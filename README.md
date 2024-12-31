@@ -44,6 +44,8 @@ This is printed for %f:
 
 The advantage to %f is that often when debugging it is important to print out what is occuring at each iteration of the for loop. Using %f is easier than printing out the whole phrase!
 
+my_printf returns the amount  of successfully printed characters
+
 This repository includes the files:
 
 my_printf.c: my code for my_printf.c
