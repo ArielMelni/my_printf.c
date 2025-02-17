@@ -1,63 +1,69 @@
-my_printf supports the types :
+# my_printf Documentation
 
-%d: integers
-%s: strings
-%c: characters
-%x: hex values
-%X: prints upper case hex 
+## Supported Types
 
-my_printf also allows for the modifiers: 
+`my_printf` supports the following format specifiers:
 
-left alignement (-), right alignment,  width, space, percision, plus sign, zero padding, star, long, short, and percent. 
+- **`%d`**: Integers  
+- **`%s`**: Strings  
+- **`%c`**: Characters  
+- **`%x`**: Hexadecimal (lowercase)  
+- **`%X`**: Hexadecimal (uppercase)  
 
-left alignment: prints 0's or spaces after the value. 
+## Supported Modifiers
 
-right alignment: prints 0's or spaces before the value
+`my_printf` also supports the following modifiers:
 
-width: the numbers that follow the % determines the total width printed ( including the length of the value and if plus or space modifiers are encountered). If the width is larger than the length of the value, nothing will change. The full value will still be printed. 
+- **Left Alignment (`-`)**: Prints `0`s or spaces **after** the value.  
+- **Right Alignment**: Prints `0`s or spaces **before** the value.  
+- **Width**: Determines the total width printed (including value length and modifiers).  
+  - If the width is larger than the value's length, nothing is truncated.  
+- **Space (` `)**: Prints a space before a positive integer.  
+- **Precision (`.`)**:  
+  - For strings: Trims the string to the specified length.  
+  - For digits: Pads with `0`s to meet the precision length.  
+- **Plus Sign (`+`)**: Adds a `+` before positive integers.  
+- **Zero Padding (`0`)**: Pads with `0`s instead of spaces to match the width.  
+- **Star (`*`)**: Uses the next argument as width or precision.  
+- **Long (`l`)**: Supports long integers.  
+- **Short (`h`)**: Supports short integers.  
+- **Percent (`%%`)**: Prints a `%` character and continues normal formatting.  
 
-space: prints a space before the integer if it is greater than or equal to 0
+## Creative Additions
 
-percision: if a . is typed after a % sign and a number is typed, then percision is the total amount of characters displayed to output. for strings, percision will cut the string to be percision amount and for digits it will print 0's to fill the space to become percision amount. 
+`my_printf` includes three additional format specifiers:
 
-plus sign: if a + is encountered after a % then the digit will have a + before it if it is positive. 
+- **`%b`**: Prints an integer as a binary number.  
+  - Negative numbers are printed as unsigned integers.  
+- **`%!`**: Converts an integer to its **two’s complement** value and prints it.  
+- **`%f`**: Requires two arguments:  
+  - **Integer `i`**  
+  - **Integer `value`**  
+  - Output format:  
+    ```c
+    "When i = %d, the int value is %d\n"
+    ```
+  - Useful for debugging loops by reducing repetitive print statements.  
 
-zero padding: if a 0 is encountered after a % than zeros will be printed instead of spaces to become width amount. 
+## Return Value
 
-star: if a * is encountered, the next argument will be the amount of width or percision that my_printf should print.
+`my_printf` returns the number of successfully printed characters.
 
-long: supports integers of long type
+---
 
-short: supports integers of short type
+## Repository Files
 
-percent: ignores the previous percent written, prints a percent, and continues printing as normal. 
+This repository contains the following files:
 
-There are also three creative additions to printf in my_printf:
+- **`my_printf.c`**: Implementation of `my_printf`.  
+- **`my_printf.h`**: Header file needed for testing.  
+- **`test_my_printf.c`**: Test cases for `my_printf`.  
+- **`output.txt`**: Output from running tests on `my_printf.c`.  
 
-1. %b: takes in an integer and prints it as a binary number. Negative numbers are printed as unsigned ints.
-2. %!: converts an integer to its two's complement value and prints the two's complement number as an integer.
-3. %f: when an f is encountered two arguments are necessary: integer i and integer value.
+## Running Tests
 
-This is printed for %f:
+To compile and run the tests, use the following commands:
 
-"When i = %d, the int value is %d\n"
-
-The advantage to %f is that often when debugging it is important to print out what is occuring at each iteration of the for loop. Using %f is easier than printing out the whole phrase!
-
-my_printf returns the amount  of successfully printed characters
-
-This repository includes the files:
-
-my_printf.c: my code for my_printf.c
-
-my_printf.h: header file needed to run my tests
-
-test_my_printf.c: my test file 
-
-output.txt: the output when running my tests on my_printf.c
-
-In order to run my tests these are the commands necessary:
-
+```sh
 gcc -o test_runner my_printf.c test_my_printf.c
-
 ./test_runner
